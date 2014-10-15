@@ -4,32 +4,24 @@
 
 (function () {
     // module declaration
-    var app = angular.module("app", ["ngRoute", "ngResource"]);
+    angular.module("app", ["ngRoute"])
+        .config(['$routeProvider',
+            function ($routeProvider) {
+                $routeProvider
+                    .when('/', {
+                        template: 'partials/home.html'
+                    })
+                    .when('/about', {
+                        template: 'partials/about.html'
+                    })
+                    .when('/projects', {
+                        template: 'partials/projects.html'
+                    })
+                    .otherwise({
+                        redirectTo: '/'
+                    });
+            }])
+        .controller("mainController", function ($scope) {
 
-    // config the routes
-    app.config(['$routeProvider',
-        function ($routeProvider) {
-            $routeProvider.
-                when('/home', {
-                    templateUrl: './partials/home.html',
-                    controller: 'mainController'
-                }).
-                when('/about', {
-                    templateUrl: './partials/about.html',
-                    controller: 'mainController'
-                }).
-                when('/projects', {
-                    templateUrl: './partials/projects.html',
-                    controller: 'mainController'
-                }).
-                otherwise({
-                    redirectTo: '/home'
-                });
-        }]
-    );
-
-    // controller
-    app.controller("mainController", function ($scope) {
-
-    });
+        });
 });
