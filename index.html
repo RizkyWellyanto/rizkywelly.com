@@ -1,14 +1,18 @@
 <!doctype html>
-
-<html data-ng-app="app">
+<html lang="en" data-ng-app="site">
 <head>
     <!-- links, scripts and title -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script type="text/javascript" src="scripts/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/angular-route.min.js"></script>
+    <script src="/scripts/main.js"></script>
     <title>RizkyWelly.com</title>
 </head>
-<body>
+<body ng-controller="mainController">
 <!-- navigation bar -->
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- nav bar title -->
         <div class="navbar-header">
@@ -19,15 +23,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#/">Muhammad Rizky Wellyanto</a>
+            <a class="navbar-brand" href="#">Muhammad Rizky Wellyanto</a>
         </div>
 
         <!-- nav bar links -->
         <div class="collapse navbar-collapse">
             <!--left side links -->
             <ul class="nav navbar-nav">
-                <li><a href="#/about">About Me</a></li>
-                <li><a href="#/projects">Personal Project</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Personal Project</a></li>
             </ul>
 
             <!-- nav bar right-side links -->
@@ -44,14 +48,9 @@
 </nav>
 
 <!-- content of the page -->
-<div class="container-fluid">
-    <div ng-view></div>
+<div class="container-fluid" id="main">
+    <div data-ng-view=""></div>
 </div>
-
-<!-- scripts -->
-<script type="text/javascript" src="scripts/angular.js"></script>
-<script type="text/javascript" src="scripts/angular-route.js"></script>
-<script type="text/javascript" src="scripts/app.js"></script>
 
 </body>
 </html>
