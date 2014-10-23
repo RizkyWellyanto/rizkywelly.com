@@ -6,15 +6,15 @@ angular.module('site', ['ngRoute'])
         $routeProvider
             .when('/', {
                 templateUrl: 'partials/home.html',
-                controller:'mainController'
+                controller: 'mainController'
             })
             .when('/about', {
                 templateUrl: 'partials/about.html',
-                controller:'aboutController'
+                controller: 'aboutController'
             })
             .when('/projects', {
                 templateUrl: 'partials/projects.html',
-                controller:'projectsController'
+                controller: 'projectsController'
             })
     })
 
@@ -22,9 +22,17 @@ angular.module('site', ['ngRoute'])
     .controller('mainController', function ($scope, $http) {
 
     })
-    .controller('aboutController', function($scope){
-
+    .controller('aboutController', function ($scope, $http) {
+        $http
+            .get('json/aboutStory.json')
+            .success(function (data, status, header, config) {
+                if (data && status === 200) {
+                    $scope.photos = data.photos;
+                    $scope.paragraphTitle = data.title;
+                    $scope.paragraphText = data.text;
+                }
+            });
     })
-    .controller('projectsController',function($scope){
-
+    .controller('projectsController', function ($scope, $http) {
+        $scope.projects = [];
     });
