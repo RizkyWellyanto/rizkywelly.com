@@ -1,5 +1,6 @@
 // instantiate module
 angular.module('site', ['ngRoute'])
+
     // config
     .config(function ($routeProvider) {
         $routeProvider
@@ -11,18 +12,19 @@ angular.module('site', ['ngRoute'])
                 templateUrl: 'partials/about.html',
                 controller:'aboutController'
             })
-            .when('projects', {
+            .when('/projects', {
                 templateUrl: 'partials/projects.html',
                 controller:'projectsController'
             })
     })
-    // controller
-    .controller('mainController', function ($scope) {
-        $scope.message = 'Hi';
+
+    // controllers
+    .controller('mainController', function ($scope, $http) {
+
     })
     .controller('aboutController', function($scope){
-        $scope.message = 'Look! I am an about page.';
+
     })
     .controller('projectsController',function($scope){
-        $scope.message = 'Look! I am an about page.';
+
     });
