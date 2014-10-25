@@ -1,8 +1,9 @@
-// instantiate module
 angular.module('site', ['ngRoute'])
 
-    // config
-    .config(function ($routeProvider) {
+/**
+ * config
+ */
+    .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'partials/home.html',
@@ -16,23 +17,50 @@ angular.module('site', ['ngRoute'])
                 templateUrl: 'partials/projects.html',
                 controller: 'projectsController'
             })
-    })
+    }])
 
-    // controllers
-    .controller('mainController', function ($scope, $http) {
+/**
+ * controllers
+ */
+    .controller('mainController', ['$scope', '$http', function ($scope, $http) {
 
-    })
-    .controller('aboutController', function ($scope, $http) {
-        $http
-            .get('json/aboutStory.json')
-            .success(function (data, status, header, config) {
-                if (data && status === 200) {
-                    $scope.photos = data.photos;
-                    $scope.paragraphTitle = data.title;
-                    $scope.paragraphText = data.text;
-                }
-            });
-    })
-    .controller('projectsController', function ($scope, $http) {
-        $scope.projects = [];
-    });
+    }])
+    .controller('aboutController', ['$scope', '$http', function ($scope, aboutFactory) {
+        // get stories from the factory
+        $scope.stories = aboutFactory.getStories();
+    }])
+    .controller('projectsController', ['$scope', 'http', function ($scope, projectFactory) {
+        // get projects from the factory
+        $scope.projects = projectFactory.getProjects();
+    }])
+
+/**
+ * factories
+ */
+    .factory('aboutFactory', ['$scope', '$http', function ($scope, $http) {
+        return {
+            getStories: function () {
+                $http
+                    .get('json/aboutStory.json')
+                    .success(function (data, status, header, config) {
+                        if (data && status === 200) {
+                            return data;
+                        }
+                    })
+            }
+        }
+    }])
+    .factory('projectFactory', ['$scope', '$http', function ($scope, $http) {
+        return {
+            getProjects: function () {
+                $http
+                    .get('json/projects.json')
+                    .success(function (data, status, header, config) {
+                        if (data && status === 200) {
+                            return data;
+                        }
+                    })
+            }
+        }
+    }
+]);

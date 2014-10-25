@@ -6,10 +6,10 @@
     </div>
 
     <!-- page content -->
-    <div class="jumbotron">
-
-        <div><h3>{{paragraphTitle}}</h3></div><div>{{photos}}</div>
-        <div>{{paragraphText}}</div>
+    <div class="jumbotron" ng-repeat="story in stories">
+        <div>{{story.photos}}</div>
+        <div><h3>{{story.title}}</h3></div>
+        <div>{{story.text}}</div>
     </div>
 
 </div>

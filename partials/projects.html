@@ -8,6 +8,10 @@
     <!-- dropdown list of projects -->
     <div></div>
 
-    <!-- projects pictures and descriptions -->
-    <div></div>
+    <!-- projects template -->
+    <div class="jumbotron" ng-repeat="project in projects">
+        <div>{{project.photos}}</div>
+        <h1>{{project.title}}</h1>
+        <p>{{project.text}}</p>
+    </div>
 </div>
