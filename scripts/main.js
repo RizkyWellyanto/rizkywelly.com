@@ -1,4 +1,4 @@
-angular.module('site', ['ngRoute'])
+angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
 /**
  * config
  */
@@ -52,6 +52,35 @@ angular.module('site', ['ngRoute'])
  * controllers
  */
     .controller('homeController', ['$scope', '$http', function ($scope, $http) {
+        $scope.slides = [
+            {image:'img/homePhoto1.jpg'},
+            {image:'img/homePhoto2.jpg'},
+            {image:'img/homePhoto3.jpg'},
+            {image:'img/homePhoto4.jpg'},
+            {image:'img/homePhoto5.jpg'},
+            {image:'img/homePhoto6.jpg'},
+            {image:'img/homePhoto7.jpg'},
+            {image:'img/homePhoto8.jpg'},
+            {image:'img/homePhoto9.jpg'}
+        ];
+
+        $scope.currentIndex = 0;
+
+        $scope.setCurrentSlideIndex = function (index){
+            $scope.currentIndex = index;
+        };
+
+        $scope.isCurrentSlideIndex = function (index) {
+            return $scope.currentIndex === index;
+        };
+
+        $scope.prevSlide = function () {
+            $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+        };
+
+        $scope.nextSlide = function () {
+            $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
+        };
 
     }])
     .controller('aboutController', ['$scope', 'storyFactory', function ($scope, storyFactory) {

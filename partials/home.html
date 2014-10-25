@@ -8,5 +8,23 @@
     </div>
 
     <!-- screenshots -->
-    <div>{{photos}}</div>
+    <div class="jumbotron">
+        <div class="carousel slide" data-ride="carousel" data-interval="5000">
+            <img ng-repeat="slide in slides" class="img-responsive" data-ride="carousel"
+                 ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+
+            <div class="carousel-caption">
+                <h3>...</h3>
+
+                <p>...</p>
+            </div>
+
+            <a class="left carousel-control" role="button" ng-click="prevSlide()">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" role="button" ng-click="nextSlide()">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
 </div>
