@@ -1,5 +1,4 @@
 angular.module('site', ['ngRoute'])
-
 /**
  * config
  */
@@ -7,7 +6,7 @@ angular.module('site', ['ngRoute'])
         $routeProvider
             .when('/', {
                 templateUrl: 'partials/home.html',
-                controller: 'mainController'
+                controller: 'homeController'
             })
             .when('/about', {
                 templateUrl: 'partials/about.html',
@@ -20,47 +19,51 @@ angular.module('site', ['ngRoute'])
     }])
 
 /**
- * controllers
+ * factories
  */
-    .controller('mainController', ['$scope', '$http', function ($scope, $http) {
+    .factory('storyFactory', ['$http', function ($http) {
+        return {
+            getStories: function () {
+                return $http.get('json/stories.json').then(function (response) {
+                    if (response.data.error) {
+                        return null;
+                    }
 
+                    return response.data;
+                })
+            }
+        };
     }])
-    .controller('aboutController', ['$scope', '$http', function ($scope, aboutFactory) {
-        // get stories from the factory
-        $scope.stories = aboutFactory.getStories();
-    }])
-    .controller('projectsController', ['$scope', 'http', function ($scope, projectFactory) {
-        // get projects from the factory
-        $scope.projects = projectFactory.getProjects();
+    .factory('projectFactory', ['$http', function ($http) {
+        return {
+            getProjects: function () {
+                return $http.get('json/projects.json').then(function (response) {
+                    if (response.data.error) {
+                        return null;
+                    }
+
+                    return response.data;
+                })
+            }
+        };
     }])
 
 /**
- * factories
+ * controllers
  */
-    .factory('aboutFactory', ['$scope', '$http', function ($scope, $http) {
-        return {
-            getStories: function () {
-                $http
-                    .get('json/aboutStory.json')
-                    .success(function (data, status, header, config) {
-                        if (data && status === 200) {
-                            return data;
-                        }
-                    })
-            }
-        }
+    .controller('homeController', ['$scope', '$http', function ($scope, $http) {
+
     }])
-    .factory('projectFactory', ['$scope', '$http', function ($scope, $http) {
-        return {
-            getProjects: function () {
-                $http
-                    .get('json/projects.json')
-                    .success(function (data, status, header, config) {
-                        if (data && status === 200) {
-                            return data;
-                        }
-                    })
-            }
-        }
-    }
-]);
+    .controller('aboutController', ['$scope', 'storyFactory', function ($scope, storyFactory) {
+        $scope.stories = [];
+
+        storyFactory.getStories().then(function (data) {
+            angular.copy(data, $scope.stories);
+        });
+    }])
+    .controller('projectsController', ['$scope', 'projectFactory', function ($scope, projectFactory) {
+        $scope.projects = [];
+        projectFactory.getProjects().then(function (data) {
+            angular.copy(data, $scope.projects);
+        });
+    }]);
