@@ -58,10 +58,7 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
             {image:'img/homePhoto3.jpg'},
             {image:'img/homePhoto4.jpg'},
             {image:'img/homePhoto5.jpg'},
-            {image:'img/homePhoto6.jpg'},
-            {image:'img/homePhoto7.jpg'},
-            {image:'img/homePhoto8.jpg'},
-            {image:'img/homePhoto9.jpg'}
+            {image:'img/homePhoto6.jpg'}
         ];
 
         $scope.currentIndex = 0;
