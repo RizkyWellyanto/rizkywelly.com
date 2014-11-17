@@ -14,9 +14,9 @@
                  ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
 
             <div class="carousel-caption">
-                <h3>...</h3>
+                <h3>{{getTitle}}</h3>
 
-                <p>...</p>
+                <p>{{getDescription}}</p>
             </div>
 
             <a class="left carousel-control" role="button" ng-click="prevSlide()">
@@ -28,6 +28,5 @@
         </div>
     </div>
 
-    <carousel interval="5000"></carousel>
     <slide></slide>
 </div>

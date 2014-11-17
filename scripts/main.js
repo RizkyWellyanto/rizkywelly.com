@@ -19,6 +19,26 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
     }])
 
 /**
+ * services
+ */
+    .service('projectDetailService', ['$http', function ($http) {
+        var projectList = [];
+
+        var addProject = function(newObj) {
+            projectList.push(newObj);
+        };
+
+        var getProject = function(){
+            return projectList.pop();
+        };
+
+        return {
+            addProduct: addProject,
+            getProducts: getProject
+        };
+    }])
+
+/**
  * factories
  */
     .factory('storyFactory', ['$http', function ($http) {
@@ -47,19 +67,29 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
             }
         };
     }])
+    .factory('carouselFactory', ['$http', function ($http) {
+        return {
+            getCarousel: function () {
+                return $http.get('json/home.json').then(function (response) {
+                    if (response.data.error) {
+                        return null;
+                    }
+
+                    return response.data;
+                })
+            }
+        };
+    }])
 
 /**
  * controllers
  */
-    .controller('homeController', ['$scope', '$http', function ($scope, $http) {
-        $scope.slides = [
-            {image:'img/homePhoto1.jpg'},
-            {image:'img/homePhoto2.jpg'},
-            {image:'img/homePhoto3.jpg'},
-            {image:'img/homePhoto4.jpg'},
-            {image:'img/homePhoto5.jpg'},
-            {image:'img/homePhoto6.jpg'}
-        ];
+    .controller('homeController', ['$scope', 'carouselFactory', function ($scope, carouselFactory) {
+        $scope.slides = [];
+
+        carouselFactory.getCarousel().then(function (data){
+            angular.copy(data, $scope.slides);
+        });
 
         $scope.currentIndex = 0;
 
@@ -77,6 +107,14 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
 
         $scope.nextSlide = function () {
             $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
+        };
+
+        $scope.getTitle = function () {
+
+        };
+
+        $scope.getCarousel = function () {
+
         };
 
     }])
