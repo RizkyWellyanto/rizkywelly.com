@@ -86,12 +86,11 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
  */
     .controller('homeController', ['$scope', 'carouselFactory', function ($scope, carouselFactory) {
         $scope.slides = [];
+        $scope.currentIndex = 0;
 
         carouselFactory.getCarousel().then(function (data){
             angular.copy(data, $scope.slides);
         });
-
-        $scope.currentIndex = 0;
 
         $scope.setCurrentSlideIndex = function (index){
             $scope.currentIndex = index;
@@ -107,14 +106,6 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
 
         $scope.nextSlide = function () {
             $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
-        };
-
-        $scope.getTitle = function () {
-
-        };
-
-        $scope.getCarousel = function () {
-
         };
 
     }])

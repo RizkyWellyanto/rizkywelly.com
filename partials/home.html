@@ -9,14 +9,13 @@
 
     <!-- screenshots -->
     <div class="jumbotron">
-        <div class="carousel slide" data-ride="carousel" data-interval="5000">
-            <img ng-repeat="slide in slides" class="img-responsive" data-ride="carousel"
-                 ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+        <div class="carousel slide" ng-repeat="slide in slides" ng-hide="!isCurrentSlideIndex($index)">
+            <img class="img-responsive" ng-src="{{slide.photo}}">
 
             <div class="carousel-caption">
-                <h3>{{getTitle}}</h3>
+                <h3>{{slide.title}}</h3>
 
-                <p>{{getDescription}}</p>
+                <p>{{slide.description}}</p>
             </div>
 
             <a class="left carousel-control" role="button" ng-click="prevSlide()">
@@ -28,5 +27,36 @@
         </div>
     </div>
 
-    <slide></slide>
+    <!--&lt;!&ndash; Carousel protoype &ndash;&gt;-->
+    <!--<div id="testCarousel" class="carousel slide">-->
+        <!--<ol class="carousel-indicators">-->
+            <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+            <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
+            <!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
+        <!--</ol>-->
+        <!---->
+        <!--<div class="carousel-inner">-->
+            <!--<div class="item active">-->
+                <!--<img src="img/homePhoto1.jpg" class="img-responsive">-->
+            <!--</div>-->
+
+            <!--<div class="item">-->
+                <!--<img src="img/homePhoto2.jpg" class="img-responsive">-->
+            <!--</div>-->
+
+            <!--<div class="item">-->
+                <!--<img src="img/homePhoto3.jpg" class="img-responsive">-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev">-->
+        <!--<span class="icon-prev"></span>-->
+    <!--</a>-->
+
+    <!--<a class="carousel-control right" href="#myCarousel" data-slide="next">-->
+        <!--<span class="icon-next"></span>-->
+    <!--</a>-->
+
+    <!--<slide></slide>-->
 </div>
