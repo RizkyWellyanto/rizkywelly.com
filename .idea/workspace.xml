@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98c4da57-d0af-4327-82cb-030ef55b30b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/blitz.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/drone.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/games.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/hardDiskReuse.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/rizkywelly.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/taskSlave.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/turnt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/piReborn.json" afterPath="$PROJECT_DIR$/json/piReborn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/projectDetails.html" afterPath="$PROJECT_DIR$/partials/projectDetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/projects.html" afterPath="$PROJECT_DIR$/partials/projects.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/projects.json" afterPath="$PROJECT_DIR$/json/projects.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RizkyWelly.com.iws" />
@@ -56,21 +47,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="projects.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/json/projects.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923" vertical-offset="900" max-vertical-offset="1890">
-              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.46306506" vertical-offset="810" max-vertical-offset="1890">
+              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="turnt.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="turnt.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/json/turnt.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09110396" vertical-offset="0" max-vertical-offset="933">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state vertical-scroll-proportion="-17.307692" vertical-offset="0" max-vertical-offset="930">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -163,7 +154,6 @@
         <option value="$PROJECT_DIR$/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/json/projectDetail.json" />
-        <option value="$PROJECT_DIR$/json/projects.json" />
         <option value="$PROJECT_DIR$/scripts/main.js" />
         <option value="$PROJECT_DIR$/partials/projectDetails.html" />
         <option value="$PROJECT_DIR$/partials/projects.html" />
@@ -175,6 +165,7 @@
         <option value="$PROJECT_DIR$/json/games.json" />
         <option value="$PROJECT_DIR$/json/drone.json" />
         <option value="$PROJECT_DIR$/json/turnt.json" />
+        <option value="$PROJECT_DIR$/json/projects.json" />
       </list>
     </option>
   </component>
@@ -390,7 +381,13 @@
       <option name="project" value="LOCAL" />
       <updated>1418931312224</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="adding project jsons">
+      <created>1418931975378</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1418931975378</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -434,7 +431,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Everything works!!! all basic functionality is done! next step would be create error handling for each controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Everything works!!! all basic functionality is done! next step would be create error handling for each controllers" />
+    <MESSAGE value="adding project jsons" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding project jsons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -737,14 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/json/projects.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923" vertical-offset="900" max-vertical-offset="1890">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/json/rizkywelly.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.0526316" vertical-offset="0" max-vertical-offset="899">
@@ -787,8 +777,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/json/turnt.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09110396" vertical-offset="0" max-vertical-offset="933">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state vertical-scroll-proportion="-17.307692" vertical-offset="0" max-vertical-offset="930">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/projects.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46306506" vertical-offset="810" max-vertical-offset="1890">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
           <folding />
         </state>
       </provider>
