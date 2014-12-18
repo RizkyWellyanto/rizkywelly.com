@@ -1,16 +1,26 @@
-<div class="container-fluid" data-ng-controller="projectDetailsController" id="home">
+<div class="container-fluid" data-ng-controller="projectDetailsController" id="projectDetails">
 
     <!-- page header -->
     <div class="page-header">
         <h1>
-            {{currentProject.title}}
+            {{project.title}}
             <br>
-            <small>{{currentProject.description}}</small>
+            <small>{{project.description}}</small>
         </h1>
     </div>
 
     <!-- steps of the project -->
-    <div class="jumbotron" ng-repeat="step in steps">
+    <div ng-repeat="step in project.steps">
+        <div class="jumbotron">
+            <h4>Step {{$index + 1}}</h4>
 
+            <div class="detailPhoto">
+                <ul>
+                    <li><img class="img-responsive" ng-src="{{step.photo}}"></li>
+                </ul>
+            </div>
+
+            <p>{{step.text}}</p>
+        </div>
     </div>
 </div>

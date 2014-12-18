@@ -1,4 +1,4 @@
-angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
+angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 /**
  * config
  */
@@ -28,17 +28,17 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
     .service('projectDetailsService', ['$http', function ($http) {
         var currentProject = "";
 
-        var setCurrentProject = function(newProj) {
+        var setCurrentProjectFile = function (newProj) {
             currentProject = newProj;
         };
 
-        var getCurrentProject = function(){
+        var getCurrentProjectFile = function () {
             return currentProject;
         };
 
         return {
-            addProjectIndex: setCurrentProject,
-            getProject: getCurrentProject
+            setCurrentProjectFile: setCurrentProjectFile,
+            getProjectFile: getCurrentProjectFile
         };
     }])
 
@@ -84,8 +84,18 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
             }
         };
     }])
-    .factory('projectDetailsFactory', ['$http', function ($http) {
+    .factory('projectDetailsFactory', ['$http', 'projectDetailsService', function ($http, projectDetailsService) {
+        return {
+            getProjectDetails: function () {
+                return $http.get('json/' + projectDetailsService.getProjectFile() + '.json').then(function (response) {
+                    if (response.data.error) {
+                        return null;
+                    }
 
+                    return response.data;
+                })
+            }
+        };
     }])
 
 /**
@@ -95,11 +105,11 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
         $scope.slides = [];
         $scope.currentIndex = 0;
 
-        carouselFactory.getCarousel().then(function (data){
+        carouselFactory.getCarousel().then(function (data) {
             angular.copy(data, $scope.slides);
         });
 
-        $scope.setCurrentSlideIndex = function (index){
+        $scope.setCurrentSlideIndex = function (index) {
             $scope.currentIndex = index;
         };
 
@@ -130,8 +140,12 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
             angular.copy(data, $scope.projects);
         });
 
-        $scope.setCurrentProject = projectDetailService.setCurrentProject;
+        $scope.setCurrentProject = projectDetailService.setCurrentProjectFile;
     }])
-    .controller('projectDetailsController', ['$scope', 'projectDetailsFactory', 'projectDetailsService', function ($scope, projectDetailsFactory, projectDetailsService) {
-        $scope.currentProject = projectDetailsService.getProject();
+    .controller('projectDetailsController', ['$scope', 'projectDetailsFactory', 'projectDetailsService', '$location', function ($scope, projectDetailsFactory, projectDetailsService, $location) {
+        $scope.project = {};
+
+        projectDetailsFactory.getProjectDetails().then(function (data) {
+            angular.copy(data, $scope.project);
+        });
     }]);

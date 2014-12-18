@@ -1,49 +1,57 @@
 [
     {
-        "index":1,
-        "title":"PiReborn",
+        "title":"Pi Reborn",
+        "file":"piReborn",
+        "status":"Done",
         "photos":[""],
         "text":"Raspberry Pi powered mini computer that used salvaged parts from my old laptop. So, i used to have an old Acer Aspire 310T that i used since i was 12. I loved that computer because i had good memories with it. It actually the laptop that witnesses my first encounter to Computer Science, yeah, the laptop that i used to bot online games with. And I always feel like it have some part of my soul in it. So when it got too slow, rusty, and old, I just couldn't throw it away, even though I already bought a new Laptop. So i want to make the most out of it. I want to recycle it. So then, i got an idea, what if i salvage my laptop parts, and use my Raspbeery Pi to create a standalone Unix Computer that's less than $75? That's awesome, so there you go, i present you, PiReborn."
     },
     {
-        "index":2,
         "title":"RizkyWelly.com",
+        "file":"rizkyWelly",
+        "status":"On Development",
         "photos":[""],
         "text":"In Summer 2014, besides having a job as a TA in Foothill College, i also took a Javascript class, which was taught by a very awesome professor. She end up opening the whole Web environement path for me. She covered all essentials for front-end web development, and made me understand it under 6 weeks. So I think, in order to practice what I've learned, I'm going to create my own personal website, which I'm going to call it RizkyWelly.com. and here it is, a post on the very website i mentioned. It's still in constant development as i begin to learn more aspect of web development."
     },
     {
-        "index":3,
-        "title":"Task Slave [Suspended]",
+        "title":"Task Slave",
+        "file":"taskSlave",
+        "status":"Halted",
         "photos":[""],
         "text":"An Android To-Do List app. I haven't continued it because I don't have much time to do do on this project. I'm a slave to my own To-Do list that's why I was thinking about creating an app that creates a simple To-Do app with priorities that could help me in my daily life."
     },
     {
-        "index":4,
-        "title":"Project Blitz [Discontinued]",
+        "title":"Project Blitz",
+        "file":"blitz",
+        "status":"Halted",
         "photos":[""],
         "text":"An essay sharing website. Discontinued, since my team lose interest in finishing it. I lead this project with my two other good friends of mine as a team. When i took english classes, i found out that creating an essay without a clear example of how the essay is a pain in the ***. So, me and my team, who went to the same College think about, what if we could create an essay sharing website that could benefit students, without promoting plagiarism. We came up with the name \"Blitz\" since we have to finish this quickly, because summer was our only free time back then, yet we didn't have enough time to finish it. "
     },
     {
-        "index":5,
         "title":"External Hard Drive from Hard Disk",
+        "file":"hardDsikReuse",
+        "status":"Done",
         "photos":[""],
         "text":""
     },
     {
-        "index":6,
-        "title":"Project Turnt [On Development]",
+        "title":"Project Turnt",
+        "file":"turnt",
+        "status":"On Development",
         "photos":[""],
         "text":""
     },
     {
-        "index":7,
-        "title":"Drone [TBD]",
+        "title":"Drone",
+        "file":"drone",
+        "status":"To Be Developed",
         "photos":[""],
         "text":""
     },
     {
-        "index":8,
-        "title":"Games [TBD]",
+        "title":"Games",
+        "file":"games",
+        "status":"To Be Developed",
         "photos":[""],
         "text":""
     }
