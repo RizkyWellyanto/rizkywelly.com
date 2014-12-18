@@ -141,6 +141,6 @@ var http = require('http');
 
 var server = http.createServer(servePage);
 
-server.listen(8080, 'localhost');
+server.listen(4040, 'localhost');
 
 console.log('Server running at http://localhost:8080');

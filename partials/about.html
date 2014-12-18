@@ -1,15 +1,18 @@
 <div class="container-fluid" data-ng-controller="aboutController" id="about">
-
     <!-- page header -->
     <div class="page-header">
         <h1>About Me</h1>
     </div>
-
     <!-- page content -->
     <div class="jumbotron" ng-repeat="story in stories">
-        <div>{{story.photos}}</div>
         <div><h3>{{story.title}}</h3></div>
+
+        <div class="row">
+            <ul ng-repeat="image in story.photos">
+                <li><img class="img-responsive" ng-src="{{image}}"></li>
+            </ul>
+        </div>
+
         <div>{{story.text}}</div>
     </div>
-
 </div>

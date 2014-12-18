@@ -2,16 +2,31 @@
 
     <!-- page header -->
     <div class="page-header">
-        <h1>My Personal Projects</h1>
+        <h1>
+            My Personal Projects
+            <br>
+            <small>Click on the Project to see the details</small>
+        </h1>
+        <!-- dropdown list of projects -->
+        <div>
+
+        </div>
     </div>
 
-    <!-- dropdown list of projects -->
-    <div></div>
-
     <!-- projects template -->
-    <div class="jumbotron" ng-repeat="project in projects">
-        <div>{{project.photos}}</div>
-        <h3>{{project.title}}</h3>
-        <p>{{project.text}}</p>
+    <div ng-repeat="project in projects">
+        <a href="#projectDetails" ng-click="setCurrentProject(project.index)">
+            <div class="jumbotron">
+                <h3>{{project.title}}</h3>
+
+                <div class="row">
+                    <ul ng-repeat="image in project.photos">
+                        <li><img class="img-responsive" ng-src="{{image}}"></li>
+                    </ul>
+                </div>
+
+                <p>{{project.text}}</p>
+            </div>
+        </a>
     </div>
 </div>

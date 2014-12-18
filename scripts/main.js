@@ -16,25 +16,29 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
                 templateUrl: 'partials/projects.html',
                 controller: 'projectsController'
             })
+            .when('/projectDetails', {
+                templateUrl: 'partials/projectDetails.html',
+                controller: 'projectDetailsController'
+            })
     }])
 
 /**
  * services
  */
-    .service('projectDetailService', ['$http', function ($http) {
-        var projectList = [];
+    .service('projectDetailsService', ['$http', function ($http) {
+        var currentProject = "";
 
-        var addProject = function(newObj) {
-            projectList.push(newObj);
+        var setCurrentProject = function(newProj) {
+            currentProject = newProj;
         };
 
-        var getProject = function(){
-            return projectList.pop();
+        var getCurrentProject = function(){
+            return currentProject;
         };
 
         return {
-            addProduct: addProject,
-            getProducts: getProject
+            addProjectIndex: setCurrentProject,
+            getProject: getCurrentProject
         };
     }])
 
@@ -80,6 +84,9 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
             }
         };
     }])
+    .factory('projectDetailsFactory', ['$http', function ($http) {
+
+    }])
 
 /**
  * controllers
@@ -116,9 +123,15 @@ angular.module('site', ['ngRoute','ngAnimate', 'ui.bootstrap'])
             angular.copy(data, $scope.stories);
         });
     }])
-    .controller('projectsController', ['$scope', 'projectFactory', function ($scope, projectFactory) {
+    .controller('projectsController', ['$scope', 'projectFactory', 'projectDetailsService', function ($scope, projectFactory, projectDetailService) {
         $scope.projects = [];
+
         projectFactory.getProjects().then(function (data) {
             angular.copy(data, $scope.projects);
         });
+
+        $scope.setCurrentProject = projectDetailService.setCurrentProject;
+    }])
+    .controller('projectDetailsController', ['$scope', 'projectDetailsFactory', 'projectDetailsService', function ($scope, projectDetailsFactory, projectDetailsService) {
+        $scope.currentProject = projectDetailsService.getProject();
     }]);
