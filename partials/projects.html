@@ -5,11 +5,13 @@
         <h1>
             My Personal Projects
             <br>
-            <small>Click on the Project to see the details</small>
+            <small>
+                Click on the Project to see the details. [Done] Projects have step-by-step details while the other might not have them.
+            </small>
         </h1>
         <!-- dropdown list of projects -->
         <div>
-
+            <!-- will be developed in near future -->
         </div>
     </div>
 
@@ -17,7 +19,7 @@
     <div ng-repeat="project in projects">
         <a href="#projectDetails" ng-click="setCurrentProject(project.file)">
             <div class="jumbotron">
-                <h3>{{project.title}}</h3>
+                <h2>{{project.title}} <small>[{{project.status}}]</small></h2>
 
                 <div class="row">
                     <ul ng-repeat="image in project.photos">
