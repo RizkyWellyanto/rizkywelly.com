@@ -1,26 +1,6 @@
 {
-  "title":"Drone",
-  "description":"",
-  "steps":[
-    {
-      "photo":"",
-      "text":""
-    },
-    {
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    }
-  ]
+  "title": "Drone",
+  "link": "",
+  "description": "This is one of the concept of my future Projects. I will update this section as soon as it realized.",
+  "steps": []
 }

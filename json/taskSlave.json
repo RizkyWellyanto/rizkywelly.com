@@ -1,26 +1,6 @@
 {
-  "title":"Task Slave",
-  "description":"",
-  "steps":[
-    {
-      "photo":"",
-      "text":""
-    },
-    {
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    }
-  ]
+  "title": "Task Slave",
+  "link": "",
+  "description": "This Project Is not done yet. I will update it as soon as it's done.",
+  "steps": []
 }

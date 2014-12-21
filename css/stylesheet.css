@@ -5,6 +5,9 @@
     padding: 5px;
     margin: 0;
 }
+#detailPhoto li{
+    width: 85%;
+}
 img {
      border: 0 none;
      display: inline-block;

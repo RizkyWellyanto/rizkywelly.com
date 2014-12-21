@@ -1,26 +1,6 @@
 {
-  "title":"Project Turnt",
-  "description":"",
-  "steps":[
-    {
-      "photo":"",
-      "text":""
-    },
-    {
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    }
-  ]
+  "title": "Project Turnt",
+  "link": "",
+  "description": "This is a social media web app that me and my team came up on HackSC and HackCC hackathon. Due to it's potential development, I don't want to release the Steps to create this project, yet. I will give the developed website if you are interested. Link:",
+  "steps": []
 }

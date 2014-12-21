@@ -1,26 +1,32 @@
 {
-  "title":"RizkyWelly.com",
-  "description":"",
-  "steps":[
+  "title": "RizkyWelly.com",
+  "link": "",
+  "description": "A brief explanation of how i created this website. I was going to create a detailed step-by-step tutorial but the time constraint made it impossible to finish. I built this website using Twitter Bootstrap and AngularJS.",
+  "steps": [
     {
-      "photo":"",
-      "text":""
+      "title" :"HTML",
+      "photo": "img/rizkywelly1.png",
+      "text": "The Html is pretty basic, one thing to note is that this website is a Single Page Webapps, meaning that it doesn't have multiple html file. One index.html and lots of partials. This is good since it's faster and more efficient than the old html only websites. You can see that there's an ng-view tags which act as a view, when the user clicks a link the only part that changes on the entire website is only the view. The navigation bar sticks there. This is possible due to the use of AngularJS, which is a MVC framework. You can see on the project structure, I have only one index.html, however I have a 'partials' folder which actually includes the other web pages. When the user moves from let's say home to projects, the website calls the partial projects.html and show it in the ng-view part, resulting a change in the content of the website."
     },
     {
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
-    },{
-      "photo":"",
-      "text":""
+      "title" :"CSS",
+      "photo": "img/rizkywelly2.png",
+      "text": "As for CSS, I used Twitter Bootstrap as the basic styling of my website. I am still learning about the design aspect as well as learning photoshop, so i will update the stylesheet.css much further down the road. As now, I'm still focused on the functionality and the content of the website itself. As for CSS Bootsrap, It's simply a css file that have a tons of styling inside it. I would think of it as a css library, you can just google it and learn how to use it in less than an hour. It's really easy to use, and provides the basic styling for general apps."
+    },
+    {
+      "title" :"JS",
+      "photo": "img/rizkywelly3.png",
+      "text": "I believe that the soul of modern websites lies inside their Javascript file. Since I use Angular, you can see from the screenshot that I use Controllers, Services, and Factories, for those who's familiar with Angular, this is normal. But for those who don't I'd recommend you to at least look google it or watch the brief explanation on youtube. I define the config and routings, because I use ng-view, it's important to set up the path which the user will have to go through, it's tied to the UX in terms of this aspect. Also without the routing, the ng-view won't work. after that I set the Factories and Services that are important for the controller. Their work is to get and set the JSON data. They will be injected dynamically to the controller. The controller itself are pretty obvious, they are the controller of each views. In my case every view, i have different controllers that control the variables, and content that will be showed to the view. In addition to the CSS, this part will always being developed, as i learn about web development more. Even though, it's working as if now, I feel the need to improve the error handling and security aspect of this website."
+    },
+    {
+      "title" :"Back End",
+      "photo": "img/rizkywelly4.png",
+      "text": "So far, I am still learning about server side development / backend development. I am in the middle of learning MongoDB, which I will later transform this project into a MEAN stack, MongoDB, ExpressJS, AngularJS, NodeJS. But so far, I haven't add any server side aspect to this project, that's why i still have a JSON file that's full of the content of this website. I will definitely share my experience doing MEAN stack once i've learned it~"
+    },
+    {
+      "title" :"Enjoy my website!",
+      "photo": "img/rizkywelly5.png",
+      "text": "Well, there you go, the brief oversimplified explanation of this website. Although it's working, I feel like I only know so little about web development. But hey, It's a small step forward, and I will always develop this website (well it's my personal website anyway) because isn't this the fun part of Computer Science? Learning, Experimenting, and Innovating new Technologies. Which most of the times lead us to an even better problems. Yep, the circle of problem solving, or should I say, the circle of science, uhmm no, the Circle of Life. Ahahaha i don't want to jot down my philosophical ideas and questions here, since it's gonna take you 2 years to read, well then, I hope you enjoy my website~"
     }
   ]
 }

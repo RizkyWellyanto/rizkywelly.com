@@ -1,26 +1,29 @@
-<div class="container-fluid" data-ng-controller="projectDetailsController" id="projectDetails">
+<div class="container-fluid" data-ng-controller="projectDetailsController" id="projectDetails"
+     xmlns="http://www.w3.org/1999/html">
 
     <!-- page header -->
     <div class="page-header">
         <h1>
-            {{project.title}}
+            <a ng-href="{{project.link}}">
+                {{project.title}}
+            </a>
             <br>
             <small>{{project.description}}</small>
         </h1>
     </div>
 
     <!-- steps of the project -->
-    <div ng-repeat="step in project.steps">
-        <div class="jumbotron">
-            <h2>Step {{$index + 1}}</h2>
+    <div class="jumbotron" ng-repeat="step in project.steps">
+        <h2>{{step.title}}</h2>
 
-            <div class="detailPhoto">
-                <ul>
-                    <li><img class="img-responsive" ng-src="{{step.photo}}"></li>
-                </ul>
-            </div>
+        <div class="row" id="detailPhoto">
+            <ul>
+                <li><img class="img-responsive" ng-src="{{step.photo}}"></li>
+            </ul>
+        </div>
 
-            <p>{{step.text}}</p>
+        <div>
+            <P>{{step.text}}</p>
         </div>
     </div>
 </div>
