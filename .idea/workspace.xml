@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98c4da57-d0af-4327-82cb-030ef55b30b7" name="Default" comment="">
+    <list default="true" id="98c4da57-d0af-4327-82cb-030ef55b30b7" name="Default" comment="Everything works and technically done as of winter break 2014. Future development will consist of better UI/UX which means better CSS styling, more secure plus adding error handling, and add backend development to this project which probably uses MEAN stack.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RizkyWelly.com.iws" />
@@ -99,8 +99,8 @@
       <file leaf-file-name="rizkywelly.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/json/rizkywelly.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41519824" vertical-offset="0" max-vertical-offset="1073">
-              <caret line="13" column="577" selection-start-line="13" selection-start-column="577" selection-end-line="13" selection-end-column="577" />
+            <state vertical-scroll-proportion="0.31938326" vertical-offset="0" max-vertical-offset="1073">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -805,8 +805,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/json/rizkywelly.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41519824" vertical-offset="0" max-vertical-offset="1073">
-          <caret line="13" column="577" selection-start-line="13" selection-start-column="577" selection-end-line="13" selection-end-column="577" />
+        <state vertical-scroll-proportion="0.31938326" vertical-offset="0" max-vertical-offset="1073">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding />
         </state>
       </provider>
