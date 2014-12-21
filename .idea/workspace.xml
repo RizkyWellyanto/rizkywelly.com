@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98c4da57-d0af-4327-82cb-030ef55b30b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/JackPokePot.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/about.html" afterPath="$PROJECT_DIR$/partials/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/blitz.json" afterPath="$PROJECT_DIR$/json/blitz.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/drone.json" afterPath="$PROJECT_DIR$/json/drone.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/games.json" afterPath="$PROJECT_DIR$/json/games.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/hardDiskReuse.json" afterPath="$PROJECT_DIR$/json/hardDiskReuse.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/home.json" afterPath="$PROJECT_DIR$/json/home.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/piReborn.json" afterPath="$PROJECT_DIR$/json/piReborn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/projectDetails.html" afterPath="$PROJECT_DIR$/partials/projectDetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/projects.html" afterPath="$PROJECT_DIR$/partials/projects.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/projects.json" afterPath="$PROJECT_DIR$/json/projects.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/rizkywelly.json" afterPath="$PROJECT_DIR$/json/rizkywelly.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/stories.json" afterPath="$PROJECT_DIR$/json/stories.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/stylesheet.css" afterPath="$PROJECT_DIR$/css/stylesheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/taskSlave.json" afterPath="$PROJECT_DIR$/json/taskSlave.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/turnt.json" afterPath="$PROJECT_DIR$/json/turnt.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RizkyWelly.com.iws" />
@@ -417,7 +401,13 @@
       <option name="project" value="LOCAL" />
       <updated>1418931975378</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Everything works and technically done as of winter break 2014. Future development will consist of better UI/UX which means better CSS styling, more secure plus adding error handling, and add backend development to this project which probably uses MEAN stack.">
+      <created>1419186244397</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1419186244397</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -462,7 +452,8 @@
     </option>
     <MESSAGE value="Everything works!!! all basic functionality is done! next step would be create error handling for each controllers" />
     <MESSAGE value="adding project jsons" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding project jsons" />
+    <MESSAGE value="Everything works and technically done as of winter break 2014. Future development will consist of better UI/UX which means better CSS styling, more secure plus adding error handling, and add backend development to this project which probably uses MEAN stack." />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything works and technically done as of winter break 2014. Future development will consist of better UI/UX which means better CSS styling, more secure plus adding error handling, and add backend development to this project which probably uses MEAN stack." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
