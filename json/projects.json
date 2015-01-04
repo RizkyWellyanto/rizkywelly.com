@@ -21,18 +21,18 @@
     "text": "This is basically a GUI Java Program that adds pokemon element into a Jackpot Machine. It was an extra credit assignment from one of my CS class on my freshman year in College. I did this partially because Pokemon was my favorite game when i was a kid and also i have a previous code that is basically a Jackpot Machine. SO why not combine them? lol"
   },
   {
-    "title": "RizkyWelly.com",
+    "title": "RizkyWelly.com 1.0",
     "file": "rizkyWelly",
     "status": "Continually Being Developed",
     "photos": ["img/rizkyweb.png"],
     "text": "In Summer 2014, besides having a job as a TA in Foothill College, i also took a Javascript class, which was taught by a very awesome professor. She end up opening the whole Web environment path for me. She covered all essentials for front-end web development, and made me understand it under 6 weeks. So I think, in order to practice what I've learned, I'm going to create my own personal website, which I'm going to call it RizkyWelly.com. and here it is, a post on the very website i mentioned. It's still in constant development as i begin to learn more aspect of web development."
   },
   {
-    "title": "Task Slave",
+    "title": "Task Slave 1.0",
     "file": "taskSlave",
-    "status": "Halted",
-    "photos": [""],
-    "text": "An Android To-Do List app. I haven't continued it because I don't have much time to do do on this project. I'm a slave to my own To-Do list that's why I was thinking about creating an app that creates a simple To-Do app with priorities that could help me in my daily life."
+    "status": "Continually Being Developed",
+    "photos": ["img/task_slave_2.png","img/task_slave_4.png"],
+    "text": "My first Android App. A simple and reliable To-Do list App that I used in my everyday life. It have basic features such as adding, displaying, editing, deleting, storing tasks. the task is simply a title and a description and a check mark whether you have finished that task or not. I am thinking about developing it much further by adding features such as deadline reminder, priority listing, social media integration, etc. I will probably try to put it in the App store, simply because I want to know how's it like to have an app in there, lol. But yeah, i will definitely keep developing this one, and put the updates on this website"
   },
   {
     "title": "Project Blitz",
