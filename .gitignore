@@ -37,5 +37,8 @@ Icon
 .Trashes
 
 
-# Ignore the Webstorm's IDE config
-.idea
+# Ignore these files -Rizky
+.idea/
+**/.idea/
+.idea/*
+projectFilesBackup
