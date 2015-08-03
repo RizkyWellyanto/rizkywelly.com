@@ -6,7 +6,8 @@
             My Personal Projects
             <br>
             <small>
-                Click on the Project to see the details. Project details might consist of the project's step-by-step development, the features of the projects, the link to the product, or even the product itself.
+                Click on the Project to see the details. Project details might consist of the project's step-by-step
+                development, the features of the projects, the link to the product, or even the product itself.
             </small>
         </h1>
         <!-- dropdown list of projects -->
@@ -19,7 +20,9 @@
     <div ng-repeat="project in projects">
         <a href="#projectDetails" ng-click="setCurrentProject(project.file)">
             <div class="jumbotron">
-                <h2>{{project.title}} <small>[{{project.status}}]</small></h2>
+                <h2>{{project.title}}
+                    <small>[{{project.status}}]</small>
+                </h2>
 
                 <div class="row">
                     <ul ng-repeat="image in project.photos">
