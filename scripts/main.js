@@ -101,9 +101,12 @@ angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 /**
  * controllers
  */
-    .controller('homeController', ['$scope', 'carouselFactory', function ($scope, carouselFactory) {
+    .controller('homeController', ['$scope', 'carouselFactory', '$interval', function ($scope, carouselFactory, $interval) {
         $scope.slides = [];
         $scope.currentIndex = 0;
+
+        var autoSlide;
+        var slideInterval = 5000;
 
         carouselFactory.getCarousel().then(function (data) {
             angular.copy(data, $scope.slides);
@@ -119,11 +122,35 @@ angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 
         $scope.prevSlide = function () {
             $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+            $scope.resetAutoSlide();
         };
 
         $scope.nextSlide = function () {
             $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
+            $scope.resetAutoSlide();
         };
+
+        $scope.startAutoSlide = function () {
+            autoSlide = $interval(function () {
+                $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
+            }, slideInterval);
+        };
+
+        $scope.resetAutoSlide = function(){
+            $interval($scope.stopAutoSlide(), slideInterval, 1);
+            $scope.startAutoSlide();
+        };
+
+        $scope.stopAutoSlide = function () {
+            $interval.cancel(autoSlide);
+        };
+
+        $scope.$on('$destroy', function () {
+            $scope.stopAutoSlide();
+        });
+
+        // run
+        $scope.startAutoSlide();
 
     }])
     .controller('aboutController', ['$scope', 'storyFactory', function ($scope, storyFactory) {

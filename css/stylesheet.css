@@ -40,7 +40,7 @@ html {
 }
 
 html body {
-    background: url(../img/overallBackground.jpg) no-repeat center center fixed;
+    background: url(../img/bg2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -87,4 +87,10 @@ a.right.carousel-control{
 a.left.carousel-control{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+}
+
+#home-carousel{
+    /*vertical-align: middle;*/
+
+    margin-top: 50px;
 }

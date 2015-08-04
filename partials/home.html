@@ -1,23 +1,23 @@
 <div class="container-fluid" data-ng-controller="homeController" id="home">
 
     <!-- page header -->
-    <div class="page-header">
-        <h1>
-            Muhammad Rizky Wellyanto
-            <br>
-            <small>Computer Science & Engineering</small>
-        </h1>
-    </div>
+    <!--<div class="page-header">-->
+        <!--<h1>-->
+            <!--Muhammad Rizky Wellyanto-->
+            <!--<br>-->
+            <!--<small>Computer Science & Engineering</small>-->
+        <!--</h1>-->
+    <!--</div>-->
 
-    <!-- screenshots -->
-    <div class="jumbotron">
+    <!-- picture slider -->
+    <div class="jumbotron" id="home-carousel">
         <div class="carousel slide" ng-repeat="slide in slides" ng-hide="!isCurrentSlideIndex($index)">
             <img class="img-responsive" ng-src="{{slide.photo}}">
 
             <div class="carousel-caption">
                 <h3>{{slide.title}}</h3>
 
-                <p>{{slide.description}}</p>
+                <!--<p>{{slide.description}}</p>-->
             </div>
 
             <a class="left carousel-control" role="button" ng-click="prevSlide()">
