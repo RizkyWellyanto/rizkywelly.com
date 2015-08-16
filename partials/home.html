@@ -6,13 +6,16 @@
             <!--Muhammad Rizky Wellyanto-->
             <!--<br>-->
             <!--<small>Computer Science & Engineering</small>-->
+
+            <!--Computer Science & Engineering-->
+
         <!--</h1>-->
     <!--</div>-->
 
     <!-- picture slider -->
     <div class="jumbotron" id="home-carousel">
         <div class="carousel slide" ng-repeat="slide in slides" ng-hide="!isCurrentSlideIndex($index)">
-            <img class="img-responsive" ng-src="{{slide.photo}}">
+            <img class="img-responsive img-thumbnail" ng-src="{{slide.photo}}">
 
             <div class="carousel-caption">
                 <h3>{{slide.title}}</h3>

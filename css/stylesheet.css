@@ -32,14 +32,14 @@ u {
     color: inherit;
 }
 
-html {
+html{
     background: transparent;
 
     /*width: 100%;*/
     /*height: 100%;*/
 }
 
-html body {
+html body, .famous-root {
     background: url(../img/bg2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -89,8 +89,35 @@ a.left.carousel-control{
     border-bottom-left-radius: 10px;
 }
 
+.img-thumbnail{
+    border-radius: 10px;
+}
+
 #home-carousel{
     /*vertical-align: middle;*/
 
     margin-top: 50px;
+    background: none;
+}
+
+#story-carousel{
+    background: none;
+}
+
+#project-carousel{
+    background: none;
+}
+
+.img-responsive{
+    width: 100%;
+}
+
+.story-text{
+    /*height: 37.5%;*/
+    /*height: 30em;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:20;
 }

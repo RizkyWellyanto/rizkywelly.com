@@ -1,7 +1,16 @@
-angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
-/**
- * config
- */
+var that = this;
+
+require(["famous/core/Engine", "famous/core/Surface", "famous/core/ScrollView"], function (FamousEngine, Surface, ScrollView) {
+
+    //var FamousEngine = require('famous/core/Engine');
+    //var Surface = require('famous/core/Surface');
+
+    that.mainContext = FamousEngine.createContext();
+    that.scrollView = new ScrollView();
+
+});
+
+this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/', {
@@ -21,10 +30,6 @@ angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
                 controller: 'projectDetailsController'
             })
     }])
-
-/**
- * services
- */
     .service('projectDetailsService', ['$http', function ($http) {
         var currentProject = "";
 
@@ -41,10 +46,6 @@ angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
             getProjectFile: getCurrentProjectFile
         };
     }])
-
-/**
- * factories
- */
     .factory('storyFactory', ['$http', function ($http) {
         return {
             getStories: function () {
@@ -97,10 +98,6 @@ angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
             }
         };
     }])
-
-/**
- * controllers
- */
     .controller('homeController', ['$scope', 'carouselFactory', '$interval', function ($scope, carouselFactory, $interval) {
         $scope.slides = [];
         $scope.currentIndex = 0;
@@ -136,7 +133,7 @@ angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
             }, slideInterval);
         };
 
-        $scope.resetAutoSlide = function(){
+        $scope.resetAutoSlide = function () {
             $interval($scope.stopAutoSlide(), slideInterval, 1);
             $scope.startAutoSlide();
         };
@@ -160,6 +157,27 @@ angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
             angular.copy(data, $scope.stories);
         });
     }])
+    .controller('aboutStoryController', ['$scope', 'storyFactory', '$interval', function ($scope, storyFactory, $interval) {
+        $scope.currentIndex = 0;
+
+        $scope.setCurrentSlideIndex = function (index) {
+            $scope.currentIndex = index;
+        };
+
+        $scope.isCurrentSlideIndex = function (index) {
+            return $scope.currentIndex === index;
+        };
+
+        $scope.prevSlide = function () {
+            $scope.currentIndex = ($scope.currentIndex < $scope.story.photos.length - 1) ? ++$scope.currentIndex : 0;
+            //$scope.resetAutoSlide();
+        };
+
+        $scope.nextSlide = function () {
+            $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.story.photos.length - 1;
+            //$scope.resetAutoSlide();
+        };
+    }])
     .controller('projectsController', ['$scope', 'projectFactory', 'projectDetailsService', function ($scope, projectFactory, projectDetailService) {
         $scope.projects = [];
 
@@ -169,7 +187,27 @@ angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 
         $scope.setCurrentProject = projectDetailService.setCurrentProjectFile;
     }])
-    .controller('projectDetailsController', ['$scope', 'projectDetailsFactory', 'projectDetailsService', '$location', function ($scope, projectDetailsFactory, projectDetailsService, $location) {
+    .controller('projectsProjectController', ['$scope', 'storyFactory', '$interval', function ($scope, storyFactory, $interval) {
+        $scope.currentIndex = 0;
+
+        $scope.setCurrentSlideIndex = function (index) {
+            $scope.currentIndex = index;
+        };
+
+        $scope.isCurrentSlideIndex = function (index) {
+            return $scope.currentIndex === index;
+        };
+
+        $scope.prevSlide = function () {
+            $scope.currentIndex = ($scope.currentIndex < $scope.project.photos.length - 1) ? ++$scope.currentIndex : 0;
+            //$scope.resetAutoSlide();
+        };
+
+        $scope.nextSlide = function () {
+            $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.project.photos.length - 1;
+            //$scope.resetAutoSlide();
+        };
+    }]).controller('projectDetailsController', ['$scope', 'projectDetailsFactory', 'projectDetailsService', '$location', function ($scope, projectDetailsFactory, projectDetailsService, $location) {
         $scope.project = {};
 
         projectDetailsFactory.getProjectDetails().then(function (data) {
