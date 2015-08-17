@@ -5,32 +5,32 @@
   "steps": [
     {
       "title": "Main Interface",
-      "photo": "img/task_slave_1.png",
+      "photo": "img/task_slave_1.jpg",
       "text": "This is the main activity of the program. Actually, since I feel like managing too much activity would be annoying, I only created one main activity, and a couple fragments that will handle the functionalities. The list under the action bar actually a ListFragment. Here the app will show the list of tasks that the user have. I implemented an ArrayList of Task in this activity. At first I was going to implement other data structure such as priority queue but then i thought It was a bit overkill, since ArrayList could do this simple task quite well. The user can click the Task on the list to get detailed information about the Task, or click the top right menu item which will take them to the add new task fragment. This Activity also loads the previous data that the application stores, so if in the previous instance the user have tasks, the program will have the tasks stored in the internal storage of the app. The app is capable of storing and reading the tasks data in JSON format using Google's Gson library. I could've used android's built in SQLite database, but i found it to be unnecessarily complicated to store Objects, so i went for the JSON path."
     },
     {
       "title": "Adding New Task",
-      "photo": "img/task_slave_2.png",
+      "photo": "img/task_slave_2.jpg",
       "text": "When the user clicks the add new task icon, It will bring them to this fragment. Where they can simply add the title of the task and optionally add description to it. I made it simple because it serves the basic needs of a to-do list which I normally writes. Once the user clicked the check mark button on the top right corner, the app will save the task to the user's tasklist. If the user presses the back button, it will simply take them back to the main task list interface. "
     },
     {
       "title": "Task Created",
-      "photo": "img/task_slave_3.png",
+      "photo": "img/task_slave_3.jpg",
       "text": "This is simply just an image of how the new task added to the user's tasklist."
     },
     {
       "title": "Checkmarking the Task",
-      "photo": "img/task_slave_4.png",
+      "photo": "img/task_slave_4.jpg",
       "text": "I feel happy every time I checked my to-do list's, it made me feel like I'm being really productive. That's why the checkboxes are pretty important in my believe, it marks the task as completed. This value will also be stored to the JSON data. I am thinking about adding more features about the point of this check marks, maybe in the near future, i will create a 'finished tasks' tasklist, so that the checked tasks will be moved to that section."
     },
     {
       "title": "Looking up Task Details",
-      "photo": "img/task_slave_5.png",
+      "photo": "img/task_slave_5.jpg",
       "text": "If the user clicks the task, the task detail fragment will pops up and shows the Task's data. From this interface, the user could either delete the task or edit the current task then save it. clicking the back button will bring them back to the main task list interface."
     },
     {
       "title": "Task Deleted",
-      "photo": "img/task_slave_6.png",
+      "photo": "img/task_slave_6.jpg",
       "text": "The task is fully deleted once the user clicked the delete task button on the task detail interface."
     }
   ]

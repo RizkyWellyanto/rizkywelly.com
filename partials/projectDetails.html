@@ -16,14 +16,17 @@
     <div class="jumbotron" ng-repeat="step in project.steps">
         <h2>{{step.title}}</h2>
 
-        <div class="row" id="detailPhoto">
-            <ul>
-                <li><img class="img-responsive" ng-src="{{step.photo}}"></li>
-            </ul>
-        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="center-carousel">
 
-        <div>
+                    <img class="img-responsive img-thumbnail" ng-src="{{step.photo}}">
+
+                </div>
+            </div>
+            <!--<div>-->
             <P>{{step.text}}</p>
+            <!--</div>-->
         </div>
     </div>
 </div>

@@ -15,32 +15,37 @@
 
         <div class="row">
             <div class="col-xs-6">
-                <!--<ul ng-repeat="image in story.photos">-->
+                <div class="center-carousel">
+                    <!--<ul ng-repeat="image in story.photos">-->
 
-                <!-- story images carousel-->
-                <div class="jumbotron" id="story-carousel" data-ng-controller="aboutStoryController">
-                    <div class="carousel slide" ng-repeat="image in story.photos" ng-hide="!isCurrentSlideIndex($index)">
-                        <img class="img-responsive img-thumbnail" ng-src="{{image}}">
-                        <a class="left carousel-control" role="button" ng-click="prevSlide()">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a class="right carousel-control" role="button" ng-click="nextSlide()">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
+                    <!-- story images carousel-->
+                    <span class="center-align-helper"></span>
+
+                    <div class="jumbotron" id="story-carousel" data-ng-controller="aboutStoryController">
+                        <div class="carousel slide" ng-repeat="image in story.photos"
+                             ng-hide="!isCurrentSlideIndex($index)">
+                            <img class="img-responsive img-thumbnail" ng-src="{{image}}">
+                            <a class="left carousel-control" role="button" ng-click="prevSlide()">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" role="button" ng-click="nextSlide()">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <!--<li><img class="img-responsive" ng-src="{{image}}"></li>-->
-                <!--</ul>-->
+                    <!--<li><img class="img-responsive" ng-src="{{image}}"></li>-->
+                    <!--</ul>-->
+                </div>
             </div>
 
-            <div class="col-xs-6">
-                <div class="story-text">
+            <!--<div class="col-xs-6">-->
+                <!--<div class="story-text">-->
                     <!--<p class="story-text">{{story.text}}</p>-->
                     <p>{{story.text}}</p>
                     <!--{{story.text}}-->
-                </div>
-            </div>
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 </div>

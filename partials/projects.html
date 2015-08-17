@@ -23,26 +23,33 @@
                 <h2>{{project.title}}
                     <small>[{{project.status}}]</small>
                 </h2>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="center-carousel">
+                            <div class="jumbotron" id="project-carousel" data-ng-controller="projectsProjectController">
+                                <div class="carousel slide" ng-repeat="image in project.photos"
+                                     ng-hide="!isCurrentSlideIndex($index)">
+                                    <img class="img-responsive img-thumbnail" ng-src="{{image}}">
+                                    <a class="left carousel-control" role="button" ng-click="prevSlide()">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                    <a class="right carousel-control" role="button" ng-click="nextSlide()">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
 
-                <div class="jumbotron" id="project-carousel" data-ng-controller="projectsProjectController">
-                    <div class="carousel slide" ng-repeat="image in project.photos" ng-hide="!isCurrentSlideIndex($index)">
-                        <img class="img-responsive img-thumbnail" ng-src="{{image}}">
-                        <a class="left carousel-control" role="button" ng-click="prevSlide()">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a class="right carousel-control" role="button" ng-click="nextSlide()">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
+                            <!--<div class="row">-->
+                            <!--<ul ng-repeat="image in project.photos">-->
+                            <!--<li><img class="img-responsive" ng-src="{{image}}"></li>-->
+                            <!--</ul>-->
+                            <!--</div>-->
+                        </div>
                     </div>
+
+                    <p>{{project.text}}</p>
+
                 </div>
-
-                <!--<div class="row">-->
-                    <!--<ul ng-repeat="image in project.photos">-->
-                        <!--<li><img class="img-responsive" ng-src="{{image}}"></li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-
-                <p>{{project.text}}</p>
             </div>
         </a>
     </div>

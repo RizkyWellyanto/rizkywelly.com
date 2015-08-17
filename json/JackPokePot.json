@@ -5,52 +5,52 @@
   "steps": [
     {
       "title": "Greetings",
-      "photo": "img/poke1.png",
+      "photo": "img/poke1.jpg",
       "text": "A simple dialog Box that greets the user."
     },
     {
       "title": "Login Frame",
-      "photo": "img/poke2.png",
+      "photo": "img/poke2.jpg",
       "text": "Login frame or Player frame. Put your name on the input box. also put your initial money. I was thinking about creating a leader board for this game so that you can see your name if you make it to the board. the money is actually any number between 0-1000000, i was thinking that if it's a real jackpot machine, it would be the insert amount of coins or credits."
     },
     {
       "title": "Instructions",
-      "photo": "img/poke3.png",
+      "photo": "img/poke3.jpg",
       "text": "If you click the instruction button, you can see the whole dialog box of Guide."
     },
     {
       "title": "The slot Frame",
-      "photo": "img/poke4.png",
+      "photo": "img/poke4.jpg",
       "text": "Once you click the play button, you'll go to the Slot Frame wehere you can play the slot machine. Simply slide the slider on the bottom to increase the amount of money you want to bet. and click roll to roll the slot machine."
     },
     {
       "title": "After the Roll",
-      "photo": "img/poke5.png",
+      "photo": "img/poke5.jpg",
       "text": "The three picture will randomly changes and the combination of the new picture determine whether you win or lose. if you win, the combination of picture will multiply your bet and give you credit."
     },
     {
       "title": "Playing Again",
-      "photo": "img/poke6.png",
+      "photo": "img/poke6.jpg",
       "text": "Keep Playing until you win more than a certain amount of money, or you lose all of your money."
     },
     {
       "title": "Lot's of money",
-      "photo": "img/poke7.png",
+      "photo": "img/poke7.jpg",
       "text": "Almost there"
     },
     {
       "title": "Nostalgic Pictures",
-      "photo": "img/poke8.png",
+      "photo": "img/poke8.jpg",
       "text": "Sometimes i don't care about the money lol. the pictures bring back memories."
     },
     {
       "title": "Whoops",
-      "photo": "img/poke9.png",
+      "photo": "img/poke9.jpg",
       "text": "Ah sh*t. well, you win some, you lose some."
     },
     {
       "title": "Yeah!!",
-      "photo": "img/poke10.png",
+      "photo": "img/poke10.jpg",
       "text": "The dialog box indicating that you win. And the program automatically quits."
     }
   ]

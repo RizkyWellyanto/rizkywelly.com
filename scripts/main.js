@@ -1,14 +1,20 @@
 var that = this;
 
-require(["famous/core/Engine", "famous/core/Surface", "famous/core/ScrollView"], function (FamousEngine, Surface, ScrollView) {
+require(["famous/core/Engine", "famous/core/Surface", "famous/views/RenderController", "famous/views/ScrollView", "famous/core/Modifier", "famous/core/Transform", "famous/surfaces/ImageSurface", "famous/modifiers/StateModifier", "famous/transitions/Easing", "famous/core/EventHandler", "famous/transitions/Transitionable"],
+    function (FamousEngine, Surface, RenderController, ScrollView, Modifier, Transform, ImageSurface, StateModifier, Easing, EventHandler, Transitionable) {
 
-    //var FamousEngine = require('famous/core/Engine');
-    //var Surface = require('famous/core/Surface');
+        //var FamousEngine = require('famous/core/Engine');
+        //var Surface = require('famous/core/Surface');
 
     that.mainContext = FamousEngine.createContext();
     that.scrollView = new ScrollView();
 
-});
+        that.createSurface = function (options) {
+            var surface = new Surface(options);
+
+            return surface;
+        }
+    });
 
 this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
     .config(['$routeProvider', function ($routeProvider) {
@@ -30,11 +36,12 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
                 controller: 'projectDetailsController'
             })
     }])
-    .service('projectDetailsService', ['$http', function ($http) {
+    .service('projectDetailsService', ['$http', '$route', function ($http, $route) {
         var currentProject = "";
 
         var setCurrentProjectFile = function (newProj) {
             currentProject = newProj;
+            $route.reload();
         };
 
         var getCurrentProjectFile = function () {
@@ -67,6 +74,15 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
                         return null;
                     }
 
+                    function compare(item1,item2) {
+                        if (item1.title < item2.title)
+                            return -1;
+                        if (item1.title > item2.title)
+                            return 1;
+                        return 0;
+                    }
+                    response.data.sort(compare);
+
                     return response.data;
                 })
             }
@@ -97,6 +113,15 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
                 })
             }
         };
+    }])
+    .controller('navBarController', ['$scope', 'projectFactory', 'projectDetailsService', function ($scope, projectFactory, projectDetailService) {
+        $scope.projectsDropDownList = [];
+
+        projectFactory.getProjects().then(function (data) {
+            angular.copy(data, $scope.projectsDropDownList);
+        });
+
+        $scope.setCurrentProject = projectDetailService.setCurrentProjectFile;
     }])
     .controller('homeController', ['$scope', 'carouselFactory', '$interval', function ($scope, carouselFactory, $interval) {
         $scope.slides = [];
