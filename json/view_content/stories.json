@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Why I Majored In Computer Science",
+    "photos": [
+      "img/story1Photo1.jpg",
+      "img/story1Photo2.jpg",
+      "img/story1Photo3.jpg"
+    ],
+    "text": "I’m Muhammad Rizky Wellyanto. I was born and raised in Indonesia. Currently pursuing Computer Science and Engineering in United States. Why I pursue computer science? Well, it all started when I was 12, I was playing an online game which was quite popular in Indonesia back then. I just got in to Junior High school and quickly realize that I have less time to play online games since high schools in Indonesia is really rigorous and time consuming. Somehow I got an idea, what if a robot can play my character while I'm studying at school or doing my homework? (I always love the idea that one day robots will help humans in doing our daily tasks). So, I wander around websites after websites, and found that there was an open source robot program which is among the programmers / hackers known as “bots”. It was a Perl based client side program that behaves like a game client, this is intended so that the program can fool the server which thinks that every request and data sent from the client side is originated from the player. A couple weeks later I figure out how to configure the program and was amazed by how incredible hundred lines of code can actually level up my characters. This was the first automation program I’ve ever configures. I never knew that hacking has been a part of my life. I remembered, how long I configures the bot program to solve problems in the virtual worlds. If I see that my bot is not solving the problem, or doing actions inefficiently, I’ll immediately debug my codes. It made me constantly checking the stream of data on my pc monitor as soon as I get home. The joy of seeing an automated program works seamlessly was unparalleled. Even though I haven’t known the term “Computer Science” back then, I already knew that this is what I want to do once I grew up, creating machines or program that could help people solving their problem. Those days have passed, I realized that botting is actually illegal, and turn my face towards the field of science that I just discovered. I quickly search about programming languages, and learn Java on my own from textbooks, and of course, online videos (it’s 21st century~). I have a dream that one day, I will come to Silicon Valley, and create a program that can solve everyone’s problem, a perfect world. (Which later I found out that perfection is “by far” impossible, yet still a good direction)."
+  },
+  {
+    "title": "So Cal Hackathons November 7-9 2014",
+    "photos": [
+      "img/story2Photo1.jpg",
+      "img/story2Photo2.jpg",
+      "img/story2Photo3.jpg",
+      "img/story2Photo4.jpg",
+      "img/story2Photo5.jpg",
+      "img/story2Photo6.jpg",
+      "img/story2Photo7.jpg",
+      "img/story2Photo8.jpg"
+    ],
+    "text": "My first hackathon (actually two hackathons). I was somewhat disappointed of my schedule on my fall 2014 quarter, because I spent so much time studying for mathematics, computer science, engineering classes. I mean, I'm a CS major in California, yet I don't have much time to do some coding of my own, or with other fellow Hackers. Isn't it ironic? So I was looking for some refreshing events to keep my mind clear. And then I came across HackCC. Hackathon for Community College. It was their first debut. Suddenly I just realized that I haven't been to one hackathon despite I've been staying in California for about a year. I realized that so far, one reason that keeps me away from joining those events is that I haven't known much people to go with, and importantly I feel not confident enough about my Hacking skill. However, I convince myself to join the Hackathon no matter how it turns out. I'm sort of pushing myself out of my comfort zone. Birds will never fly if they're afraid of height, anyway. Since it's HackCC's first debut, I was volunteering myself as one of the Ambassador for my College, even though only a couple people ends up joining the event. Then, I met a couple guys from nearby Community Colleges and joined them to the HackCC, which later we form up a team. I had an Idea of a social app that could bring friends to party together. Which later be the core project of our team. I led the team since I had the detailed idea of the service, and together we worked on it for the weekend. We soon realize that there's actually a bigger Hackathon in USC, HackSC, on the same day, so we actually went to there instead. It was my first experience in a Hackathon, and it totally blew my biological CPU. I never know how much I love the People, the Environment, and the Challenge Hackathons offer until that moment. We didn't win though, however, we learned a lot of stuff about hacker culture, and more importantly I learned a lot about myself."
+  },
+  {
+    "title": "Interning at Foothil College's Summer Camp as a Teacher's Assistant for Robotics and 3D printing",
+    "photos": [
+      "img/story3Photo1.jpg",
+      "img/story3Photo2.jpg",
+      "img/story3Photo3.jpg",
+      "img/story3Photo4.jpg",
+      "img/story3Photo5.jpg"
+    ],
+    "text": "In Summer 2014, besides taking CS classes, I got an internship at my college as a TA for Robotics and 3D printing. My main responsibilities are to help the professor teach the class, help the students and more importantly engage enthusiastically~ It was an awesome experience. I wasn't only taught other students the stuff that I know about Robotics and 3D printing, but also I learned so much stuff from my professor. My professor is a really cool guy, he knows a lot about Drones, Copters, 3D printers, etc. I learned how 3D printers actually work, and taught it to the class. I also learned the fundamental hardware aspect of drones. And it's not the small 100 bucks drone, but the big-ass 2 grand one. Since I'm a CS major, I look at the programming aspect of the drone and learn that the coding is really complex... yet awesome!! it opens a new path for me, which I soon realize that there are many open source codes, and DIY kits for drones. I can't wait to do my own personal projects about those stuff. I also have the opportunity to use Foothill's 3D printer, not the small 1000 bucks makerbot one, but the giant 40 grand one. it looks more like a wardrobe in my opinion. Surprisingly I also learned the basic of 3D modeling because of that, since well, what do you want to print if you don't have the 3D object. Even though it was a short full time internship, I love the things I learned there. I realize that teaching is as fun as learning. Technologies are rapidly evolving, and I'm glad I have the opportunity to work with it."
+  },
+  {
+    "title":"LA Hacks, UCLA, April 4-6 2015",
+    "photos": [
+      "img/lahack1.jpg",
+      "img/lahack2.jpg",
+      "img/lahack3.jpg"
+    ],
+    "text":"By the end of Spring Break 2015 I had the chance to join one of the most anticipated Hackathon in Southern California, LA Hacks. Accompanied by my previous team of awesome hackathon hackers, we made a silly, yet fun website, Yelpy. The Idea is a social media that rates your friend. In other words, it's yelp for people. However before we could finish it we got distracted, so it's not actually done. The website is running on Django framework written in Python. My main goal for this Hackathon was to learn more about back-end web programming, so I spent most of my time learning and Implementing the Django server with my friend."
+  },
+  {
+    "title":"Lincoln Lab Hackathon, SF, July 18-19 2015",
+    "photos": [
+      "img/llhack1.jpg",
+      "img/llhack2.jpg",
+      "img/llhack3.jpg",
+      "img/llhack4.jpg",
+      "img/llhack5.jpg"
+    ],
+    "text":"During Summer 2015, I got an invitation from Lincoln Lab to join their Hackathon in San Francisco. I was working in a startup called Everfave back then, but I'm kind of bored for staying in Mountain View for such a long time, so I decided to participate in that hackathon. Turns out one of my friend is also participating there. So we came up with an idea of making a mobile app that has an AI inside it. The main functionality of the app is to give the user data-driven suggestion whenever the user tries to buy something. We called it Fawn, because we don't know what else to call it. The detailed specification can be found in the Projects Tab. We met another 2 programmers which we actually know before. And we form a team. The hackathon itself was somewhat weird. Not in a bad way. It's just diffferent. It seems like it's a Government backed hackathon or something, since I saw lots of people with suits attend the event. However it was a cool experience, we almost finished the program, up until some of the team member has to go and couldn't make it back to the hackathon."
+  },
+  {
+    "title":"Life as Everfave Intern, Summer 2015",
+    "photos": [
+      "img/everfave8.jpg",
+      "img/everfave2.jpg",
+      "img/everfave3.jpg"
+    ],
+    "text":"After I finished my study in Foothill college in spring 2015, I was very lucky to be contacted by the CEO of a silicon valley based young startup called Everfave. Even though I had other summer job offers, I want to experience how startup works, and how the CEO handles the startup itself. So I took the job, and loved it. I worked as the Full stack Web Developer. Mainly using Javascript, I was responsible for the Main page of the WebApp. I also helped implement some API endpoints and unit-test them on the server side. One thing I realized about working in a startup is, I feel like I live with the whole company as a family. Everybody knows what the others are doing. And the sense of responsibility and pride dominates me as I need to make sure that my prt is done and working. However collaboration is the key to efficiency, since time is really precious in the fast-paced environment such as the startup world. There was weekends where I had to stay in the office till 3 AM in the morning because we have to catch the deadline. All in all, I really enjoyed it, and hope that I could follow the enterpreneurial path myself in the future."
+  }
+]

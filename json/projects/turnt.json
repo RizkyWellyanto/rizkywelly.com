@@ -1,0 +1,42 @@
+{
+  "title": "Project Turnt",
+  "link": "https://github.com/iceysteel/Turnt",
+  "description": "This is a social media web app that me and my team came up on HackSC and HackCC hackathon. Due to it's potential development, I don't want to release the Steps to create this project, yet. I will give the developed website if you are interested. Link:",
+  "steps": [
+    {
+      "title": "Login Page",
+      "photo": "img/turnt1.jpg",
+      "text": "This is the login page of the website. You could register or Sign in to the website. "
+    },
+    {
+      "title": "Register Page",
+      "photo": "img/turnt2.jpg",
+      "text": "Fill in your username and password to register for turnt."
+    },
+    {
+      "title": "Logging In",
+      "photo": "img/turnt3.jpg",
+      "text": "Using your username and password you can login to turnt."
+    },
+    {
+      "title": "Host Party",
+      "photo": "img/turnt4.jpg",
+      "text": "You can host party by clicking the Host party button. Fill in the locatio, Date and Time, and the cost of the party. Hit submit to post the party to the grand turnt list."
+    },
+    {
+      "title": "Created a Party",
+      "photo": "img/turnt5.jpg",
+      "text": "Once you created a party there'll be a popup showing you the detail of the party."
+    },
+    {
+      "title": "Your Party",
+      "photo": "img/turnt6.jpg",
+      "text": "You can Check your own party by accessing it through your profile."
+    },
+    {
+      "title": "Parties around You",
+      "photo": "img/turnt7.jpg",
+      "text": "You could click the Parties button in the navigation bar to see the list of parties going on around you."
+    }
+  ]
+}

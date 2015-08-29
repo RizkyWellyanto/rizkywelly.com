@@ -1,0 +1,106 @@
+[
+  {
+    "title": "Pi Reborn",
+    "file": "piReborn",
+    "status": "Done",
+    "photos": [
+      "img/piReborn7.jpg",
+      "img/piReborn8.jpg"
+    ],
+    "text": "Raspberry Pi powered mini computer that used salvaged parts from my old laptop. I used to have an old Acer Aspire 310T that I've been using since I was 12. Love that computer. I had good memories with it. It was actually the laptop I used to bot online games with. So it got slow and rusty over time. I just couldn't throw it away, even though I already bought a new laptop. So I want to make something out of it. That's the point where I thought salvaging some part of that laptop combined with my Raspbeery Pi, I could create a standalone Unix Computer that's less than $75."
+  },
+  {
+    "title": "Hard Disk Reuse",
+    "file": "hardDiskReuse",
+    "status": "Done",
+    "photos": [
+      "img/hardDisk7.jpg"
+    ],
+    "text": "This is just a simple mini sunday project that I did on my freshman year. I reuse the old hard disk of my laptop and make it an external hard drive."
+  },
+  {
+    "title": "JackPokePot",
+    "file": "jackPokePot",
+    "status": "Done",
+    "photos": [
+      "img/poke4.jpg",
+      "img/poke8.jpg",
+      "img/poke10.jpg"
+    ],
+    "text": "This is basically a GUI Java Program that adds pokemon element into a Jackpot Machine. It was an extra credit assignment from one of my CS class on my freshman year in College. I did this partially because Pokemon was my favorite game when I was a kid and also I have a previous code that is basically a Jackpot Machine. SO why not combine them?"
+  },
+  {
+    "title": "RizkyWelly.com",
+    "file": "rizkyWelly",
+    "status": "Continually Being Developed",
+    "photos": [
+      "img/rizkyweb.jpg"
+    ],
+    "text": "In Summer 2014, besides having a job as a TA in Foothill College, I also took a Javascript class, which was taught by a very awesome professor. She end up opening the whole Web environment path for me. She covered all essentials for front-end web development, and made me understand it under 6 weeks. So I think, in order to practice what I've learned, I'm going to create my own personal website, which I'm going to call it RizkyWelly.com. and here it is, a post on the very website I mentioned. It's still in constant development as i begin to learn more aspect of web development."
+  },
+  {
+    "title": "Task Slave",
+    "file": "taskSlave",
+    "status": "Discontinued",
+    "photos": [
+      "img/task_slave_2.jpg",
+      "img/task_slave_4.jpg"
+    ],
+    "text": "My first Android App. A simple and reliable To-Do list App that I used in my everyday life. It have basic features such as adding, displaying, editing, deleting, storing tasks. the task is simply a title and a description and a check mark whether you have finished that task or not. The app is available in Google Play Store under the same name TaskSlave. I was thinking about continuing this mini project of mine, but I don't have enough spare time to do it."
+  },
+  {
+    "title": "Blitz",
+    "file": "blitz",
+    "status": "Discontinued",
+    "photos": [
+      "img/blitz1.jpg"
+    ],
+    "text": "An essay sharing website. Discontinued, my team doesn't have time to continue developing this website. I lead this project with my two other good friends of mine as a team. When I took english classes, I found out that creating an essay without a clear example of how the essay is a pain in the ***. So, me and my team, who went to the same College think about, what if we could create an essay sharing website that could benefit students, without promoting plagiarism. We came up with the name \"Blitz\" since we have to finish this quickly, because summer was our only free time back then, yet we didn't have enough time to finish it. "
+  },
+  {
+    "title": "Turnt",
+    "file": "turnt",
+    "status": "Discontinued",
+    "photos": [
+      "img/turnt1.jpg",
+      "img/turnt2.jpg",
+      "img/turnt3.jpg",
+      "img/turnt4.jpg",
+      "img/turnt5.jpg",
+      "img/turnt6.jpg",
+      "img/turnt7.jpg"
+    ],
+    "text": "A social media web app, that have something to do with parties! Okay it's actually a crowd-funding platform for parties! Me and my team is still doing some development on this one. Due to it's potential awesome product, it wouldn't put details about this project, yet. If it's proven to be cool, I would think about moving this webapps into a mobile platform."
+  },
+  {
+    "title":"DartDeal.com",
+    "file": "DartDeal",
+    "status": "On Development",
+    "photos": [
+
+    ],
+    "text": "This is my current startup project that I'm currently working on."
+  },
+  {
+    "title":"Yelpy",
+    "file": "yelpy",
+    "status": "Discontinued",
+    "photos": [
+      "img/yelpy1.jpg",
+      "img/yelpy2.jpg",
+      "img/yelpy3.jpg",
+      "img/yelpy4.jpg",
+      "img/yelpy5.jpg"
+    ],
+    "text": "Yelp for People. Rate your friends and comment on it."
+  },
+  {
+    "title":"Fawn",
+    "file": "fawn",
+    "status": "On Development",
+    "photos": [
+
+    ],
+    "text": "Your Personal Shopping Assistant."
+  }
+]

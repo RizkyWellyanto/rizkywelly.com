@@ -1,0 +1,23 @@
+{
+  "title": "Fawn",
+  "link": "https://github.com/RizkyWellyanto/Fawn-App",
+  "description": "Your personal shopping advisor. Ever wonder whether you made the right decision every time you buy something? Or you just need another extra opinion while shopping? Fawn is the right mobile app for you. Using this app, you could take a picture of an item that you're about to buy, and Fawn the Artificial Intelligent will give you recommendation whether you should by it or consider other similar item.",
+  "steps":
+  [
+    {
+      "title": "Take picture of the item You're about to buy.",
+      "photo": "",
+      "text": "While you're shopping, and not sure whether to buy the item or not, simply open Fawn and take a picture. You could also take a picture of an item in an advertisement, and Fawn will detect it perfectly."
+    },
+    {
+      "title": "Fawn will detect what item in the picture and she will do some research in seconds.",
+      "photo": "",
+      "text": "Once you've taken the picture, Fawn will browse the world wide web for you. She will her private server and call data centers around the world to get data from sites such as Am*zon, Eb*y, etc. With her intelligence and lots of Linear Algebra she'll find similar items for you, and compare all of the item based on lots of factor such as Rating, Price, Comment, Satisfaction, etc. "
+    },
+    {
+      "title": "Fawn will give her honest opinion like she's your best friend.",
+      "photo": "",
+      "text": "Fawn will show you her opinion in split second. She will let you know if your item is worth buying, or she'll give you a list of similar item that she thinks worth better than your current item."
+    }
+  ]
+}

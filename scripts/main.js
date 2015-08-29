@@ -41,6 +41,8 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 
         var setCurrentProjectFile = function (newProj) {
             currentProject = newProj;
+            // somehow save project to the
+
             $route.reload();
         };
 
@@ -56,10 +58,12 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
     .factory('storyFactory', ['$http', function ($http) {
         return {
             getStories: function () {
-                return $http.get('json/stories.json').then(function (response) {
+                return $http.get('json/view_content/stories.json').then(function (response) {
                     if (response.data.error) {
                         return null;
                     }
+
+                    response.data.reverse();
 
                     return response.data;
                 })
@@ -69,7 +73,7 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
     .factory('projectFactory', ['$http', function ($http) {
         return {
             getProjects: function () {
-                return $http.get('json/projects.json').then(function (response) {
+                return $http.get('json/view_content/projects.json').then(function (response) {
                     if (response.data.error) {
                         return null;
                     }
@@ -91,7 +95,7 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
     .factory('carouselFactory', ['$http', function ($http) {
         return {
             getCarousel: function () {
-                return $http.get('json/home.json').then(function (response) {
+                return $http.get('json/view_content/home.json').then(function (response) {
                     if (response.data.error) {
                         return null;
                     }
@@ -104,7 +108,7 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
     .factory('projectDetailsFactory', ['$http', 'projectDetailsService', function ($http, projectDetailsService) {
         return {
             getProjectDetails: function () {
-                return $http.get('json/' + projectDetailsService.getProjectFile() + '.json').then(function (response) {
+                return $http.get('json/projects/' + projectDetailsService.getProjectFile() + '.json').then(function (response) {
                     if (response.data.error) {
                         return null;
                     }
@@ -238,4 +242,6 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
         projectDetailsFactory.getProjectDetails().then(function (data) {
             angular.copy(data, $scope.project);
         });
+
+        // load the currentDetailProject from localstorage
     }]);
