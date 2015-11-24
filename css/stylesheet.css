@@ -40,15 +40,24 @@ html {
 }
 
 html body, .famous-root {
-    background: url(../img/bg2.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    /*background: url(../img/bg2.jpg) no-repeat center center fixed;*/
+
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
 
     /*width: 100%;*/
     /*height: 100%;*/
     /*min-height: 100%;*/
+}
+
+body{
+    background: #f2f3ee url('../img/circuit-tile.jpeg') top left repeat;
+    font-family: 'Open Sans', "Helvetica Neue", Arial, sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
 }
 
 /*html, body{*/
@@ -57,7 +66,8 @@ html body, .famous-root {
 /*}*/
 
 .jumbotron {
-    background: rgba(255, 255, 255, 0.7);
+    /*background: rgba(255, 255, 255, 0.7);*/
+    background: rgba(255, 255, 255, 1);
     border-radius: 10px;
     /*vertical-align: middle;*/
     /*display: inline-block;*/
@@ -68,17 +78,25 @@ html body, .famous-root {
     /*border-radius: 10px;*/
 
     color: #ffffff;
+    /*color: black;*/
+    /*background: rgba(255, 255, 255, 1);*/
+    /*border-radius: 10px;*/
 }
 
 .page-header small {
     color: #ffffff;
+    /*color: black;*/
 }
 
 .content-body {
     margin-top: 50px;
 
     width: 75%;
-    height: inherit;
+    /*height: inherit;*/
+    height: auto;
+
+    background: transparent;
+    border-radius: 10px;
 }
 
 a.right.carousel-control {
@@ -184,4 +202,34 @@ a.left.carousel-control {
 
 #loaded-drop-down-list{
 
+}
+
+#resumeBox{
+    padding: 10px;
+    width: 100%;
+    height:100vh;
+}
+
+h1, h2, h3{
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.page-header hr{
+
+}
+
+#projectDetails{
+    background: black;
+}
+
+#projects{
+    background: black;
+}
+
+#about{
+    background: black;
+}
+
+#navBar{
+    /*background: white;*/
 }

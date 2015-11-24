@@ -1,5 +1,15 @@
 var that = this;
 
+require(['jquery', 'bootstrap'], function($){
+
+    // DOM ready
+    $(function(){
+
+        // Twitter Bootstrap 3 carousel plugin
+        $("#element").carousel();
+    });
+});
+
 require(["famous/core/Engine", "famous/core/Surface", "famous/views/RenderController", "famous/views/ScrollView", "famous/core/Modifier", "famous/core/Transform", "famous/surfaces/ImageSurface", "famous/modifiers/StateModifier", "famous/transitions/Easing", "famous/core/EventHandler", "famous/transitions/Transitionable"],
     function (FamousEngine, Surface, RenderController, ScrollView, Modifier, Transform, ImageSurface, StateModifier, Easing, EventHandler, Transitionable) {
 
@@ -34,6 +44,10 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
             .when('/projectDetails', {
                 templateUrl: 'partials/projectDetails.html',
                 controller: 'projectDetailsController'
+            })
+            .when('/resume',{
+                templateUrl:'partials/resume.html',
+                controller:'resumeController'
             })
     }])
     .service('projectDetailsService', ['$http', '$route', function ($http, $route) {
@@ -244,4 +258,7 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
         });
 
         // load the currentDetailProject from localstorage
+    }])
+    .controller('resumeController', ['$scope', function ($scope) {
+
     }]);

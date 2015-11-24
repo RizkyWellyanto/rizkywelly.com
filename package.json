@@ -1,0 +1,26 @@
+{
+  "name": "rizkywelly.com",
+  "version": "1.0.0",
+  "description": "Muhammad Rizky Wellyanto's personal website",
+  "main": "server.js",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "famous": "^0.7.1",
+    "requirejs": "^2.1.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RizkyWellyanto/rizkywelly.com.git"
+  },
+  "author": "Muhammad Rizky Wellyanto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RizkyWellyanto/rizkywelly.com/issues"
+  },
+  "homepage": "https://github.com/RizkyWellyanto/rizkywelly.com#readme"
+}

@@ -1,15 +1,24 @@
 <!doctype html>
 <html lang="en" data-ng-app="site">
 <head>
+    <!-- Meta Description for Search Engine Results -->
+    <meta name="description" content="Muhammad Rizky Wellyanto is an aspiring Full-Stack Developer and Future Tech Entrepreneur.">
+
     <!-- links and title -->
+    <link rel="stylesheet" href="css/normalize.css">
+
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="css/stylesheet.css"/>
-    <title>RizkyWelly.com</title>
+    <title>Rizky | Rockstar Hacker</title>
+    <meta name="description" content="Muhammad Rizky Wellyanto is an aspiring full-stack developer and a future tech entrepreneur.">
+
+    <!-- Google Fonts integration: http://www.google.com/fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300|Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <!-- navigation bar -->
-<nav class="navbar navbar-default navbar-fixed-top" data-ng-controller="navBarController">
+<nav class="navbar navbar-default navbar-fixed-top" data-ng-controller="navBarController" id="navBar">
     <div class="container-fluid">
         <!-- nav bar title -->
         <div class="navbar-header">
@@ -53,6 +62,7 @@
                         <!--&lt;!&ndash;</div>&ndash;&gt;-->
                     </div>
                 </li>
+                <li><a href="#resume" class="btn custom-nav-button">Resume</a></li>
             </ul>
 
             <!-- nav bar right-side links -->
@@ -89,6 +99,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
 <script src="scripts/ui-bootstrap-tpls-0.11.2.min.js"></script>
 <script src="/scripts/main.js"></script>
+<script src="/scripts/modernizr.js"></script>
 
 </body>
 </html>
