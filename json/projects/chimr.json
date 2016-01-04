@@ -1,0 +1,27 @@
+{
+  "title": "Chimr",
+  "link": "http://devpost.com/software/chimr",
+  "description": "Advanced Home Security Device With Auto-Messaging",
+  "steps": [
+    {
+      "title": "Simple, secure, and trendy-looking box that's easy to install",
+      "photo": "img/chimr0.jpg",
+      "text": "Chimr is contained in a secure cardboard casing with 'stylish' skin that is up-to date with the current trend. It is very eye-catchting so that guests will take notice which compells them to look at the box. Chimr sensor will then recognize the person then notify the residents via text. Chimr box is also self-contained. Chimr's internal system is complete with wifi adapter that connects it to the internet, sensors, and LCD screen to show texts to the guest. Chimr is easy to set up, securing it in your front door would be as easy as taking out garbage, just put it in front of your door and nobody will try to steal it."
+    },
+    {
+      "title": "Get Notifications Anywhere and Anytime",
+      "photo": "img/chimr1.jpg",
+      "text": "Chimr is connected to the cloud. Once you put your number in the Chimr system, wherever you are, you will have notifications if a guest is detected in front of your door. Chimr have a dedicated website so putting your number is as easy as typing a google search."
+    },
+    {
+      "title": "Multiple Residents Notification",
+      "photo": "img/chimr2.jpg",
+      "text": "Chimr system accomodates multiple accounts to be notified. Simply add numbers to the dedicated Chimr website, and you are set."
+    },
+    {
+      "title": "Get your Chimr now",
+      "photo": "img/wh0.jpg",
+      "text": "Retail price starts from $49.99"
+    }
+  ]
+}

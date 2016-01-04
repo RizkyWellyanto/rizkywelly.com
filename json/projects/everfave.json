@@ -1,0 +1,32 @@
+{
+  "title": "Everfave",
+  "link": "https://everfave.com/",
+  "description": "Stuff I worked on while I was working at Everfave as a fullstack web developer. Obviously I can't post everything I did since 1. there's a ton of them 2. I signed an NDA 3. There's no way to take screen shot of back-end stuff. So this is probably the only stuff I can show. I had a great time developing this app with the team. And 3-month feels so quick since I start with limited to no knowledge about most of the technologies we used (Only know the basics of JavaScript when I entered). But I learned a lot from back-end structures, RESTful API implementations, Data Flow, Databases, to Startup Strategies, and many more.",
+  "steps": [
+    {
+      "title": "Welcome Page",
+      "photo": "img/everfave1.jpg",
+      "text": "Did some tweaks on the landing page. Such as debugging some famo.us layers upon starting. Changing the color of the UI. And simplifying some functions that results in faster App load."
+    },
+    {
+      "title": "Main Interface",
+      "photo": "img/everfave4.jpg",
+      "text": "Main interface of the app. Implemented pagination that recycles DOM object using the famo.us framework, and some open source library. This makes the program to reuse DOM objects and changes the data corresponding to the DOM objects instead of creating new object for each businesses. This greatly improve the performance of the App to almost twice as fast as before. This also makes the scrolling smoother. Also polish the CSS of this page and fixed some bug regarding z-index position of each famo.us surface."
+    },
+    {
+      "title": "Location Search",
+      "photo": "img/everfave6.jpg",
+      "text": "Developed the interface to handle location-based search query. Combining some third-party API as well as our own API to get the data of businesses that is sorted based on location. The algorithm was mainly developed by my co-workers, but I helped finished it and push it to production."
+    },
+    {
+      "title": "Auto-complete",
+      "photo": "img/everfave7.jpg",
+      "text": "Help implemented the auto-complete feature. Together with the location search, both is a part of the main page."
+    },
+    {
+      "title": "Back-end Development",
+      "photo": "img/everfave9.png",
+      "text": "There are a lot of other stuff that I did in the backend server. The server was developed in NodeJS environment. Helped clean-up the routing in the NodeJS server, which makes it more readable. Implemented the server endpoints for searching business. Also modified some of the endpoints for the main interface to accomodate the new features that are not available from the previous production version. This involves in modifying the way the client and server interact through BackBone MVC system. Did a full-scale unit-test of the endpoints using mocha.js framework."
+    }
+  ]
+}

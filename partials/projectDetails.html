@@ -4,12 +4,20 @@
     <!-- page header -->
     <div class="page-header">
         <h1>
-            <a ng-href="{{project.link}}">
+            <!--<a ng-href="{{project.link}}">-->
                 {{project.title}}
-            </a>
+            <!--</a>-->
             <br>
             <small>{{project.description}}</small>
+
+
         </h1>
+
+        <div class="button-box">
+            <a type="button" class="btn btn-default btn-md bottom-right-position" ng-href="{{project.link}}">
+                Source Code
+            </a>
+        </div>
     </div>
 
     <!-- steps of the project -->

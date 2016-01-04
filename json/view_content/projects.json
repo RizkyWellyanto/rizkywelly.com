@@ -102,5 +102,30 @@
 
     ],
     "text": "Your Personal Shopping Assistant."
+  },
+  {
+    "title":"Chimr",
+    "file": "chimr",
+    "status": "Done",
+    "photos": [
+      "img/chimr0.jpg",
+      "img/chimr2.jpg",
+      "img/wh2.jpg",
+      "img/wh0.jpg",
+      "img/chimr1.jpg"
+    ],
+    "text": "Won best communication hack using Twilio API and top 20 on Wildhacks 2015. Chimr ‘box’ will text residents when a stranger is detected. Residents can then text messages back to the system which will be shown in the LCD display. Developed the back-end server using Python + Flask Framework which handles sensor data and text messages to/from the Arduino board housed inside the product"
+  },
+  {
+    "title":"Everfave",
+    "file": "everfave",
+    "status": "Done",
+    "photos": [
+      "img/everfave1.jpg",
+      "img/everfave5.jpg",
+      "img/everfave7.jpg",
+      "img/everfave8.jpg"
+    ],
+    "text": "This is the stuff I did during summer 2015 working at everfave as a fullstack web developer. I was responsible for the main interface, the landing page, of the front-end. Also, I helped implementing, unit-testing, and debugging the endpoints of the back-end. Mostly done in JavaScript. I can't really show much stuff, since I signed an NDA, and this is just a sample stuff or screen shots without many detailed explanation about the product/service itself. But it will mainly talk about the stuff I worked on, the challenges, and the solutions."
   }
 ]

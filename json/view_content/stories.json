@@ -61,5 +61,26 @@
       "img/everfave3.jpg"
     ],
     "text":"After I finished my study in Foothill college in spring 2015, I was very lucky to be contacted by the CEO of a silicon valley based young startup called Everfave. Even though I had other summer job offers, I want to experience how startup works, and how the CEO handles the startup itself. So I took the job, and loved it. I worked as the Full stack Web Developer. Mainly using Javascript, I was responsible for the Main page of the WebApp. I also helped implement some API endpoints and unit-test them on the server side. One thing I realized about working in a startup is, I feel like I live with the whole company as a family. Everybody knows what the others are doing. And the sense of responsibility and pride dominates me as I need to make sure that my prt is done and working. However collaboration is the key to efficiency, since time is really precious in the fast-paced environment such as the startup world. There was weekends where I had to stay in the office till 3 AM in the morning because we have to catch the deadline. All in all, I really enjoyed it, and hope that I could follow the enterpreneurial path myself in the future."
+  },
+  {
+    "title":"Studying at University of Illinois at Urbana-Champaign",
+    "photos": [
+      "img/uiuc0.jpg",
+      "img/uiuc1.jpg",
+      "img/uiuc2.jpg",
+      "img/uiuc3.jpg",
+      "img/uiuc4.jpg"
+    ],
+    "text":"On Fall 2015 I transfered to one of the best engineering school in the United States, University of Illinois at Urbana Champaign. I was accepted in their Computer Science program in their engineering department. I was so excited to start a new chapter of my life in this institution. Their exceptional computer science program, great faculty, researches opportunity, startup incubators, and their highly sociable environment (an entire city full of 40k college students! OMG) really get me pumped up. I am very lucky to be here, and I hope I can make use of every opportunity I have efficiently. "
+  },
+  {
+    "title":"Wildhacks 2015",
+    "photos": [
+      "img/wh0.jpg",
+      "img/wh1.jpg",
+      "img/wh2.jpg",
+      "img/wh3.jpg"
+    ],
+    "text":"Hosted on Northern Illinois University, wildhacks was the first hackathon I actually won something. Me and my team placed in top 15 of the hacks, and won the best communication prize using Twilio's API. This is also my first time playing around with hardware. We made a home security system, which we call Chimr. And each of us get Arduino Yun (Yay! more hardware to hack with). "
   }
 ]

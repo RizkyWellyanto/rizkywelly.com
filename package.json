@@ -6,7 +6,8 @@
   "dependencies": {
     "bootstrap": "^3.3.5",
     "famous": "^0.7.1",
-    "requirejs": "^2.1.20"
+    "particles.js": "^2.0.0",
+    "requirejs": "^2.1.22"
   },
   "devDependencies": {},
   "scripts": {

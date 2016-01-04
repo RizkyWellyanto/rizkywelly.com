@@ -1,30 +1,30 @@
 var that = this;
 
-require(['jquery', 'bootstrap'], function($){
-
-    // DOM ready
-    $(function(){
-
-        // Twitter Bootstrap 3 carousel plugin
-        $("#element").carousel();
-    });
-});
-
-require(["famous/core/Engine", "famous/core/Surface", "famous/views/RenderController", "famous/views/ScrollView", "famous/core/Modifier", "famous/core/Transform", "famous/surfaces/ImageSurface", "famous/modifiers/StateModifier", "famous/transitions/Easing", "famous/core/EventHandler", "famous/transitions/Transitionable"],
-    function (FamousEngine, Surface, RenderController, ScrollView, Modifier, Transform, ImageSurface, StateModifier, Easing, EventHandler, Transitionable) {
-
-        //var FamousEngine = require('famous/core/Engine');
-        //var Surface = require('famous/core/Surface');
-
-    that.mainContext = FamousEngine.createContext();
-    that.scrollView = new ScrollView();
-
-        that.createSurface = function (options) {
-            var surface = new Surface(options);
-
-            return surface;
-        }
-    });
+//require(['jquery', 'bootstrap'], function($){
+//
+//    // DOM ready
+//    $(function(){
+//
+//        // Twitter Bootstrap 3 carousel plugin
+//        $("#element").carousel();
+//    });
+//});
+//
+//require(["famous/core/Engine", "famous/core/Surface", "famous/views/RenderController", "famous/views/ScrollView", "famous/core/Modifier", "famous/core/Transform", "famous/surfaces/ImageSurface", "famous/modifiers/StateModifier", "famous/transitions/Easing", "famous/core/EventHandler", "famous/transitions/Transitionable"],
+//    function (FamousEngine, Surface, RenderController, ScrollView, Modifier, Transform, ImageSurface, StateModifier, Easing, EventHandler, Transitionable) {
+//
+//        //var FamousEngine = require('famous/core/Engine');
+//        //var Surface = require('famous/core/Surface');
+//
+//    that.mainContext = FamousEngine.createContext();
+//    that.scrollView = new ScrollView();
+//
+//        that.createSurface = function (options) {
+//            var surface = new Surface(options);
+//
+//            return surface;
+//        }
+//    });
 
 this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
     .config(['$routeProvider', function ($routeProvider) {
@@ -255,6 +255,11 @@ this.Angular = angular.module('site', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 
         projectDetailsFactory.getProjectDetails().then(function (data) {
             angular.copy(data, $scope.project);
+
+            // check whether the project has a link or not
+            if($scope.project.link === undefined || $scope.project.link === ""){
+                $(".button-box").addClass("hidden");
+            }
         });
 
         // load the currentDetailProject from localstorage

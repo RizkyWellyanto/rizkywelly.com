@@ -6,19 +6,22 @@
             My Personal Projects
             <br>
             <small>
-                Click on the Project's title to see the details. Project details might consist of the project's step-by-step
-                development, the features of the projects, the link to the product, or even the product itself.
+                Project details might consist of the project's step-by-step
+                development, the features of the projects, the link to the project,
+                the source code, or even the project itself.
             </small>
         </h1>
     </div>
 
     <!-- projects template -->
     <div ng-repeat="project in projects" >
-        <a href="#projectDetails" ng-click="setCurrentProject(project.file)">
+        <!--<a href="#projectDetails" ng-click="setCurrentProject(project.file)">-->
             <div class="jumbotron">
                 <h2>{{project.title}}
-                    <small>[{{project.status}}]</small>
+                    <!--<small>[{{project.status}}]</small>-->
                 </h2>
+
+
                 <div class="row">
                     <div class="col-xs-6">
                         <div class="center-carousel">
@@ -44,9 +47,16 @@
                     </div>
 
                     <p>{{project.text}}</p>
+                </div>
 
+                <div class="button-box">
+                    <!--<button type="button" class="btn btn-default btn-md bottom-right-position">-->
+                        <a type="button" class="btn btn-default btn-md bottom-right-position btn-read-more" href="#projectDetails" ng-click="setCurrentProject(project.file)">
+                            Read More
+                        </a>
+                    <!--</button>-->
                 </div>
             </div>
-        </a>
+        <!--</a>-->
     </div>
 </div>
