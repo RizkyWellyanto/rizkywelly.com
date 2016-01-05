@@ -1,6 +1,6 @@
 {
   "title": "Task Slave",
-  "link": "https://github.com/RizkyWellyanto/TaskSlave",
+  "link": "https://play.google.com/store/apps/details?id=com.rizkywelly.taskslave",
   "description": "Why TaskSlave? a friend of mine asks me for my app name. Well, because if you do this kind of to-do lists you know you're a slave of your own tasks. And yeah, I always use lots of to-do lists, I always like to plan ahead. However, after a while I feel bad about doing it because I realized how much paper I used just to write those lists. So, since I am learning Android Apps, have one week before winter break ends, and more importantly a CS Major, I decided to create this app! It was my first Android app I've ever created, so if you decided to see the source code and found out that the code is a bit messy and still inefficient, it's because i was still learning. Now looking back at those codes, I feel kinda pissed of because I could optimize the code much further, but well, anyway it was my first App, and it looks really awesome lol. And it's very helpful, I used it on my everyday life since I made this App. I'm also dedicated to keep adding features to this App, I'm the one who benefits most from this App anyway. PS: click the title to see the source code on github",
   "steps": [
     {
