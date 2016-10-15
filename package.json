@@ -1,15 +1,9 @@
 {
   "name": "rizkywelly.com",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Muhammad Rizky Wellyanto's personal website",
   "main": "server.js",
-  "dependencies": {
-    "bootstrap": "^3.3.5",
-    "famous": "^0.7.1",
-    "particles.js": "^2.0.0",
-    "requirejs": "^2.1.22"
-  },
-  "devDependencies": {},
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -23,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/RizkyWellyanto/rizkywelly.com/issues"
   },
-  "homepage": "https://github.com/RizkyWellyanto/rizkywelly.com#readme"
+  "homepage": "https://github.com/RizkyWellyanto/rizkywelly.com#readme",
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-contrib-uglify": "^0.5.0"
+  }
 }

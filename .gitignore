@@ -42,5 +42,6 @@ Icon
 **/.idea/
 .idea/*
 projectFilesBackup
-
+node_modules/*
 npm-debug.log
+.vagrant
