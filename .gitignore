@@ -45,3 +45,5 @@ projectFilesBackup
 node_modules/*
 npm-debug.log
 .vagrant
+node_modules/
+config

@@ -2,61 +2,27 @@
  * Created by welly on 09/24/2016.
  */
 
-module.exports = function(grunt) {
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-express-server');
-    grunt.loadNpmTasks('grunt-contrib-copy');
+module.exports = function (grunt) {
     grunt.initConfig({
-        // copy: {
-        //   html: {
-        //     files: [
-        //       // includes files within path
-        //       {expand: true, flatten: true, src: ['source_html/*.html'], dest: 'public/', filter: 'isFile'},
-        //     ],
-        //   },
-        // },
-        uglify: {
-            my_target: {
-                files: {
-                    'public/js/script.js': ['source_js/*.js']
-                } //files
-            } //my_target
-        }, //uglify
-        compass: {
-            dev: {
-                options: {
-                    config: 'compass_config.rb'
-                } //options
-            } //dev
-        }, //compass
+        pkg:grunt.file.readJSON('package.json'),
         watch: {
-            options: { livereload: true },
-            scripts: {
-                files: ['source_js/*.js'],
-                tasks: ['uglify']
-            }, //script
-            sass: {
-                files: ['source_sass/*.scss'],
-                tasks: ['compass:dev']
-            }, //sass
-            html: {
-                files: ['public/*.html'],
-                // tasks: ['copy:html']
-            }
-        }, //watch
+            options: {livereload: true},
+            files: ['public/**', 'server.js', 'routes/**', 'models/**'],
+            tasks:[]
+        },
         express: {
-            options: {
-                // Override defaults here
-            },
-            dev: {
-                options: {
-                    script: 'app.js'
+            all:{
+                options:{
+                    port:3000,
+                    hostname:'localhost',
+                    bases:['./public'],
+                    livereload:true,
+                    script:'server.js'
                 }
             }
         }
-    }) //initConfig
-    grunt.registerTask('serve', ['express:dev', 'watch']);
-    grunt.registerTask('default', ['uglify', 'compass:dev', 'serve']);
-} //exports
+    });
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-express-server');
+    grunt.registerTask('default', ['express:all', 'watch']);
+};

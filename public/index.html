@@ -2,10 +2,10 @@
 <html lang="en">
 <head profile="red wolf icon">
     <!-- icon -->
-    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="icon" type="image/png" href="media/icon.png">
 
     <!-- bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- css -->
@@ -13,71 +13,41 @@
 
     <!-- title -->
     <title>Rizky | Hacker, Designer, Entrepreneur</title>
-    <meta name="description" content="Muhammad Rizky Wellyanto is a full-stack developer and aspiring tech entrepreneur.">
+    <meta name="description"
+          content="Muhammad Rizky Wellyanto is a full-stack developer and aspiring tech entrepreneur.">
 
-    <!-- Google Fonts integration: http://www.google.com/fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Rouge+Script" rel="stylesheet">
+    <!-- google fonts -->
+
 </head>
-<body>
+<body ng-app="app">
+
 <!-- navigation bar -->
-<nav class="navbar navbar-default navbar-fixed-top" data-ng-controller="navBarController" id="navBar">
-    <div class="container-fluid">
-        <!-- nav bar title -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand btn custom-nav-button" href="#">Muhammad Rizky Wellyanto</a>
-        </div>
+<nav class="" data-ng-controller="NavBarController" id="NavBar">
 
-        <!-- nav bar links -->
-        <div class="collapse navbar-collapse">
-            <!--left side links -->
-            <ul class="nav navbar-nav">
-                <li><a href="#about" class="btn custom-nav-button">About Me</a></li>
-                <li>
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle custom-nav-button" type="button" id="projects-drop-down"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <a href="#projects">Personal Projects</a>
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="projects-drop-down-ist">
-                            <li><a href="#projects">All Projects</a></li>
-                            <li ng-repeat="project in projectsDropDownList">
-                                <a href="#projectDetails"
-                                   ng-click="setCurrentProject(project.file)">{{project.title}}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#resume" class="btn custom-nav-button">Resume</a></li>
-            </ul>
-
-            <!-- nav bar right-side links -->
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="btn" href="https://www.linkedin.com/in/rizkywellyanto">LinkedIn</a></li>
-                <li><a class="btn" href="https://github.com/RizkyWellyanto">Github</a></li>
-                <li><a class="btn" href="https://www.facebook.com/rizky.wellyanto">Facebook</a></li>
-                <li><a class="btn" href="http://devpost.com/RizkyWelly?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">DevPost</a></li>
-            </ul>
-        </div>
-    </div>
 </nav>
 
 <!-- content of the page -->
-<div>
-    <img class="img-responsive" src="img/rizky_yahoo_yoga2_landscape.jpg">
+<div ng-view>
+
 </div>
 
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="/scripts/main.js"></script>
+<!-- scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="./js/app.js"></script>
+<script src="./js/controllers.js"></script>
+<script src="./js/services.js"></script>
+
+
+<!-- grunt livereload -->
+<script src="http://localhost:35729/livereload.js"></script>
 
 </body>
 </html>

@@ -1,95 +1,31 @@
-/**
- * Created by MuhammadRizky on 8/3/14.
- */
+var path = require("path");
+var express = require("express");
+var compression = require("compression");
+var bodyParser = require("body-parser");
+var secrets = require("./config/secrets");
+var mongoose = require('mongoose');
+var router = express.Router();
+var app = express();
 
-function servePage(request, response) {
+// db connection
+mongoose.connect(secrets.mongo_connection);
 
-    var supportedTypes = {
+// compression
+app.use(compression());
 
-        // general stuff
-        'html': 'text/html; charset = UTF-8',
-        'txt': 'text/plain; charset = UTF-8',
-        'js': 'application/javascript; charset = UTF-8',
-        'appcache': 'text/cache-manifest; charset = UTF-8',
-        'css': 'text/css; charset = UTF-8',
-        'json': 'application/json; charset = UTF-8',
-        'htm' : 'text/html',
-        'php' : 'text/html',
-        'xml' : 'application/xml',
-        'swf' : 'application/x-shockwave-flash',
-        'flv' : 'video/x-flv',
+// parsing req body
+app.use(bodyParser.urlencoded({ extended: true }));
 
-        // images
-        'png' : 'image/png',
-        'jpe' : 'image/jpeg',
-        'jpeg' : 'image/jpeg',
-        'jpg' : 'image/jpeg',
-        'gif' : 'image/gif',
-        'bmp' : 'image/bmp',
-        'ico' : 'image/vnd.microsoft.icon',
-        'tiff' : 'image/tiff',
-        'tif' : 'image/tiff',
-        'svg' : 'image/svg+xml',
-        'svgz' : 'image/svg+xml',
+// static paths
+app.use(express.static(path.join(__dirname, '/public')));
 
-        // archives
-        'zip' : 'application/zip',
-        'rar' : 'application/x-rar-compressed',
-        'exe' : 'application/x-msdownload',
-        'msi' : 'application/x-msdownload',
-        'cab' : 'application/vnd.ms-cab-compressed',
+// routes
+require('./routes')(app, router);
 
-        // audio/video
-        'mp3' : 'audio/mpeg',
-        'qt' : 'video/quicktime',
-        'mov' : 'video/quicktime',
+// server instance
+var server = app.listen(process.env.PORT || 8080, function (){
+    var host = server.address().address;
+    var port = server.address().port;
 
-        // adobe
-        'pdf' : 'application/pdf',
-        'psd' : 'image/vnd.adobe.photoshop',
-        'ai' : 'application/postscript',
-        'eps' : 'application/postscript',
-        'ps' : 'application/postscript',
-
-        // ms office
-        'doc' : 'application/msword',
-        'rtf' : 'application/rtf',
-        'xls' : 'application/vnd.ms-excel',
-        'ppt' : 'application/vnd.ms-powerpoint',
-
-        // open office
-        'odt' : 'application/vnd.oasis.opendocument.text',
-        'ods' : 'application/vnd.oasis.opendocument.spreadsheet'
-
-    };
-
-    var filename = url.parse(request.url).pathname.substring(1);
-    if (!filename) {
-        filename = 'index.html';
-    }
-    var extension = filename.substring( filename.lastIndexOf(".") + 1) ;
-    var type = supportedTypes[extension];
-    fs.readFile( filename, function( err, content) {
-        if (err) {
-            response.writeHead( 404, {
-                'Content-Type': 'text/plain; charset = UTF-8'
-            });
-            response.write( err.message);
-            response.write( ' - The page requested is not found.');
-            response.end();
-        } else {
-            response.writeHead( 200, {
-                'Content-Type': type
-            });
-            response.write(content);
-            response.end();
-        }
-    });
-}
-
-var url = require('url');
-var fs = require("fs");
-var http = require('http');
-var server = http.createServer(servePage);
-server.listen(4040, 'localhost');
-console.log('Server running at http://localhost:4040');
+    console.log('Server listening at http://%s:%s', host, port);
+});
